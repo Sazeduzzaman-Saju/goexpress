@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GoExpress - Transport & Logistics Service</title>
+    <link
+      rel="icon"
+      href="assets/img/favicon.png"
+      sizes="20x20"
+      type="image/png"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/vendor.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/custom_style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
+    />
+  </head>
+  <body>
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-inner">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- search popup start-->
+    <div class="body-overlay" id="body-overlay"></div>
+    <div class="td-search-popup" id="td-search-popup">
+      <form action="home.html" class="search-form">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search....." />
+        </div>
+        <button type="submit" class="submit-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+    </div>
+    <!-- search popup end-->
+    <main>
+      <div class="sidebar">
+        <div class="logo-details">
+          <img src="https://i.ibb.co/x27VjRM/Go-Express-LOGO.png" alt="" />
+        </div>
+        <ul class="nav-links">
+          <li class="active">
+            <a href="user-dashboard.html">
+              <i class="fa-solid fa-house"></i>
+              <span class="link_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-globe"></i>
+                <span class="link_name">Ship Anywhere</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="create-shipment.html">Create Shipment</a></li>
+              <li><a href="shipment-list.html">Shipment List</a></li>
+              <li><a href="pickup.html">Pickup</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-ship"></i>
+                <span class="link_name">Shipping Supply</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="#">USPS - Free of Cost.</a></li>
+              <li><a href="#">USPS - Free of Cost.</a></li>
+              <li><a href="#">FedEx - Free of Cost.</a></li>
+              <li><a href="#">DHL - Free of Cost.</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span class="link_name">Booking Parcel</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="create-booking.html">Create Booking</a></li>
+              <li><a href="booking-list.html">Booking List</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span class="link_name">Shop & Ship</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="payment-due.html">Payment Due</a></li>
+              <li><a href="ongoing-order.html">Ongoing Orders</a></li>
+              <li><a href="delivered-order.html">Delivered Orders</a></li>
+              <li><a href="cancelled-orders.html">Cancelled Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="profile-details">
+              <div class="profile-content">
+                <img
+                  class="rounded-circle"
+                  src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
+                  alt="profileImg"
+                />
+              </div>
+              <div class="name-job">
+                <div class="profile_name">Sazeduzzaman</div>
+                <div class="job">Web Desginer</div>
+              </div>
+              <i class="fa-solid fa-right-from-bracket text-white"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="home-section">
+        <!-- Header Start -->
+        <div
+          class="bg-white d-flex justify-content-between align-items-center user_header"
+        >
+          <!-- Toggler Icon -->
+          <div class="home-content">
+            <i class="fa-solid fa-right-left bx-menu"></i>
+          </div>
+          <!-- Header Menu -->
+          <div>
+            <a href="" class="me-3"
+              ><i class="fa-solid fa-ship pe-1 icon-site-red"></i>SHOPPING</a
+            >
+            <a href="create-shipment.html" class="me-3"
+              ><i class="fa-solid fa-globe pe-1 icon-site-red"></i>SHIP
+              ANYWHERE</a
+            >
+            <a href="" class="me-3"
+              ><i class="fa-solid fa-truck-ramp-box pe-1 icon-site-red"></i>USA
+              TO BD CARGO</a
+            >
+            <a href="" class="me-3"
+              ><i class="fa-solid fa-shop pe-1 icon-site-red"></i>SHOP & SHIP</a
+            >
+            <a href="" class="me-3"
+              ><i class="fa-solid fa-user pe-1 icon-site-red"></i> VIEW
+              ACCOUNTS</a
+            >
+          </div>
+          <!-- Profile -->
+          <div>
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle pe-2"
+                type="button"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  class="rounded-circle p-0"
+                  width="50px"
+                  src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
+                  alt="profileImg"
+                />
+              </a>
+              <ul class="dropdown-menu border-0 shadow-lg text-end">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >My Profile <i class="fa-regular fa-user ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shipping List<i class="fa-solid fa-list ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Time Table
+                    <i class="fa-solid fa-table-cells-large ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shiping Status <i class="fa-solid fa-signal ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Log Out
+                    <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Header End -->
+        <form action="" method="get">
+          <div class="container-fluid pb-5">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="text-center" style="padding-top: 30px">
+                  <h3>Create USA to BD cargo Booking Form</h3>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h6 class="p-0 m-0">Shipment Information</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="row gx-2">
+                      <div class="col-lg-3">
+                        <div class="p-3 bg-light" style="height: 200px;">
+                          <div class="text-center">
+                            <div class="dashboard-box">
+                              <i
+                                class="fa-solid fa-plane-arrival udshbrd-card-icon"
+                              ></i>
+                            </div>
+                            <h6>USA to BANGLADESH</h6>
+                            <p>Next Shipment: 20 January-2024</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="p-3 bg-light" style="height: 200px;">
+                          <div class="text-center">
+                            <div class="dashboard-box">
+                              <i
+                                class="fa-regular fa-calendar-check udshbrd-card-icon"
+                              ></i>
+                            </div>
+                            <h6>Next Scheduled Flight</h6>
+                            <p>Loading</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="p-3 bg-light" style="height: 200px;">
+                          <div class="text-center">
+                            <div class="dashboard-box">
+                              <i
+                                class="fa-solid fa-house udshbrd-card-icon"
+                              ></i>
+                            </div>
+                            <h6>
+                              woow|your name, 158-18 111th Avenue, STE US639595,
+                              Jamaica, New York, 11433, USA
+                            </h6>
+                            <p>Tel : (908) 897 2566</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="p-3 bg-light" style="height: 200px;">
+                          <div class="text-center">
+                            <div class="dashboard-box">
+                              <i
+                                class="fa-solid fa-money-check-dollar udshbrd-card-icon"
+                              ></i>
+                            </div>
+                            <h6>Shipping charge $6.5/lbs</h6>
+                            <p>8-12 days delivery</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mt-5">
+                <div class="card">
+                  <div class="card-header">
+                    <p class="p-0 m-0">Customer Information</p>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="mb-2">
+                          <label for="validationCustom03" class="form-label"
+                            >Sender Name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control form-control-solid form-control-sm"
+                            placeholder="Sender Name"
+                            id="validationCustom01"
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="mb-2">
+                          <label for="validationCustom03" class="form-label"
+                            >Sender Phone Number</label
+                          >
+                          <input
+                            type="number"
+                            class="form-control form-control-solid form-control-sm"
+                            placeholder="Sender Phone Number"
+                            id="validationCustom01"
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="mb-2">
+                          <label for="validationCustom03" class="form-label"
+                            >Receiver Name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control form-control-solid form-control-sm"
+                            placeholder="Receiver Name"
+                            id="validationCustom01"
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="mb-2">
+                          <label for="validationCustom03" class="form-label"
+                            >Receiver Phone Number</label
+                          >
+                          <input
+                            type="number"
+                            class="form-control form-control-solid form-control-sm"
+                            placeholder="Receiver Phone Number"
+                            id="validationCustom01"
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mt-5">
+                <div class="card">
+                  <div class="card-header">
+                    <p class="p-0 m-0">Do You Have Valued Items?</p>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-47" />
+                          <label for="cb-47">Check this</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-48" />
+                          <label for="cb-48">Check this</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-49" />
+                          <label for="cb-49">Check this</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-50" />
+                          <label for="cb-50">Check this</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-4 pt-2">
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-47" />
+                          <label for="cb-47">Check this</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-48" />
+                          <label for="cb-48">Check this</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-49" />
+                          <label for="cb-49">Check this</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-50" />
+                          <label for="cb-50">Check this</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-4 pt-2">
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-47" />
+                          <label for="cb-47">Check this</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-48" />
+                          <label for="cb-48">Check this</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-49" />
+                          <label for="cb-49">Check this</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="checkbox-wrapper-47">
+                          <input type="checkbox" name="cb" id="cb-50" />
+                          <label for="cb-50">Check this</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mt-5">
+                <div class="card">
+                  <div class="card-header">Delivery Mode In Bangladesh</div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-check" style="border: 1px dashed red;">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                          />
+                          <label for="cb-58" class="p-2 rounded-1">
+                            <div class="d-flex justify-content-between">
+                              <h6 class="p-0 m-0">Home Delivery</h6>
+                              <h6 class="p-0 m-0">Free</h6>
+                            </div>
+                            <p class="m-0 p-0 text-start">
+                              Additional Courier Fee will be added.
+                            </p>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-check" style="border: 1px dashed red;">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault2"
+                          />
+                          <label for="cb-57" class="p-2 rounded-1">
+                            <div class="d-flex justify-content-between">
+                              <h6 class="p-0 m-0">Warehouse Pickup</h6>
+                              <h6 class="p-0 m-0">Free</h6>
+                            </div>
+                            <p class="m-0 p-0 text-start">
+                              Collect from Your Nearest Warehouse
+                            </p>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Showing Items -->
+                    <div class="row">
+                      <div class="col-lg-12 home-delivery">
+                        <div class="p-3">
+                          <h6>Home Delivery Address</h6>
+                        <p>We use third party courier for home delivery in Bangladesh.In Dhaka city PATHAO,REDEX,PAPERFLY,Other District SUNDARBAN SA PARIBAHAN,MOON EXPRESS</p>
+                        <p class="text-danger">
+                          Please type your address & COURIER company name.
+                        </p>
+                        <div>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-12 war-house-pickup">
+                        <div class="text-center p-4">
+                          <h6>Bangladesh Warehouse Address GoExpress</h6>
+                          <p>House # 254, Road # 03 Baridhara DOHS,Dhaka
+                            Hotline : +880 1816-369701</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mt-5">
+                <div class="card">
+                  <div class="card-header">Box & Weight Details</div>
+                  <div class="card-body">
+                    <div class="row">
+                      <h6>Box Number (#1)</h6>
+                      <div class="col-lg-2">
+                        <div class="mb-2">
+                          <label for="validationCustom03" class="form-label"
+                            >Length</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control form-control-solid form-control-sm"
+                            placeholder="Length"
+                            id="validationCustom01"
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-2">
+                        <div class="mb-2">
+                          <label for="validationCustom03" class="form-label"
+                            >Width</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control form-control-solid form-control-sm"
+                            placeholder="Width"
+                            id="validationCustom01"
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-2">
+                        <div class="mb-2">
+                          <label for="validationCustom03" class="form-label"
+                            >Height</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control form-control-solid form-control-sm"
+                            placeholder="Height"
+                            id="validationCustom01"
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="mb-2">
+                          <label for="validationCustom03" class="form-label"
+                            >Gross Weight(lbs)</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control form-control-solid form-control-sm"
+                            placeholder="Gross Weight(lbs)"
+                            id="validationCustom01"
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="mb-2">
+                          <label for="validationCustom03" class="form-label"
+                            >Chargeable Weight</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control form-control-solid form-control-sm"
+                            placeholder="Chargeable Weight(lbs)"
+                            id="validationCustom01"
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mt-5">
+                <div class="card">
+                  <div class="card-header">Insurance Coverage</div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-check" style="border: 1px dashed red;">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault12"
+                          />
+                          <label for="cb-58" class="p-2 rounded-1">
+                            <div class="d-flex justify-content-between">
+                              <h6 class="p-0 m-0">FULL INSURANCE COVERAGE</h6>
+                              <h6 class="p-0 m-0">Yes</h6>
+                            </div>
+                            <p class="m-0 p-0 text-start">
+                              Max. insurance coverage $2500.
+                            </p>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-check" style="border: 1px dashed red;">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault22"
+                          />
+                          <label for="cb-57" class="p-2 rounded-1">
+                            <div class="d-flex justify-content-between">
+                              <h6 class="p-0 m-0">WITHOUT INSURANCE</h6>
+                              <h6 class="p-0 m-0">No</h6>
+                            </div>
+                            <p class="m-0 p-0 text-start">
+                              No coverage
+                            </p>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mt-5">
+                <div class="card">
+                  <div class="card-header">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <p>Total Gross Weight : 0.00 lbs</p>
+                      <p>Total Dim Weight : 0.00 lbs</p>
+                    </div>
+                  </div>
+                  <div class="card-body p-4" style="height: 95px;">
+                    <h6>Weight Charge : $0</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+      <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+    <!-- all plugins here -->
+    <script
+      src="https://kit.fontawesome.com/69b7156a94.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- main js  -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+         // Hide columns by default
+    $(".home-delivery, .war-house-pickup").hide();
+        // Clicking on the entire .form-check div will trigger the radio button click
+        $(".form-check").click(function () {
+          // Find the radio button within the clicked .form-check
+          var radioButton = $(this).find('input[type="radio"]');
+
+          // Check the radio button
+          radioButton.prop("checked", true);
+
+          // Remove border from all checkboxes
+          $(".form-check").removeClass("check-border");
+
+          // Add border to the selected checkbox
+          $(this).addClass("check-border");
+
+          // Check if the selected radio button has id 'flexRadioDefault1' (58)
+          if (radioButton.attr("id") == "flexRadioDefault1") {
+            // Show home-delivery and hide war-house-pickup
+            $(".home-delivery").show();
+            $(".war-house-pickup").hide();
+          } else if (radioButton.attr("id") == "flexRadioDefault2") {
+            // Show war-house-pickup and hide home-delivery
+            $(".war-house-pickup").show();
+            $(".home-delivery").hide();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

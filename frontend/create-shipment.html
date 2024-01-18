@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GoExpress - Transport & Logistics Service</title>
+    <link
+      rel="icon"
+      href="assets/img/favicon.png"
+      sizes="20x20"
+      type="image/png"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/vendor.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/custom_style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
+    />
+  </head>
+  <body>
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-inner">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- search popup start-->
+    <div class="body-overlay" id="body-overlay"></div>
+    <div class="td-search-popup" id="td-search-popup">
+      <form action="home.html" class="search-form">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search....." />
+        </div>
+        <button type="submit" class="submit-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+    </div>
+    <!-- search popup end-->
+    <main>
+      <div class="sidebar">
+        <div class="logo-details">
+          <img src="https://i.ibb.co/x27VjRM/Go-Express-LOGO.png" alt="" />
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="user-dashboard.html">
+              <i class="fa-solid fa-house"></i>
+              <span class="link_name">Dashboard</span>
+            </a>
+          </li>
+          <li class="active">
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-globe"></i>
+                <span class="link_name">Ship Anywhere</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li class="active">
+                <a href="create-shipment.html">Create Shipment</a>
+              </li>
+              <li><a href="shipment-list.html">Shipment List</a></li>
+              <li><a href="pickup.html">Pickup</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-ship"></i>
+                <span class="link_name">Shipping Supply</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="#">USPS - Free of Cost.</a></li>
+              <li><a href="#">USPS - Free of Cost.</a></li>
+              <li><a href="#">FedEx - Free of Cost.</a></li>
+              <li><a href="#">DHL - Free of Cost.</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span class="link_name">Booking Parcel</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="create-booking.html">Create Booking</a></li>
+              <li><a href="booking-list.html">Booking List</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span class="link_name">Shop & Ship</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="payment-due.html">Payment Due</a></li>
+              <li><a href="ongoing-order.html">Ongoing Orders</a></li>
+              <li><a href="delivered-order.html">Delivered Orders</a></li>
+              <li><a href="cancelled-orders.html">Cancelled Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="profile-details">
+              <div class="profile-content">
+                <img
+                  class="rounded-circle"
+                  src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
+                  alt="profileImg"
+                />
+              </div>
+              <div class="name-job">
+                <div class="profile_name">Sazeduzzaman</div>
+                <div class="job">Web Desginer</div>
+              </div>
+              <i class="fa-solid fa-right-from-bracket text-white"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="home-section" style="height: 110vh; min-height: 100vh;">
+        <div
+          class="bg-white d-flex justify-content-between align-items-center user_header"
+        >
+          <!-- Toggler Icon -->
+          <div class="home-content">
+            <i class="fa-solid fa-right-left bx-menu"></i>
+          </div>
+          <!-- Header Menu -->
+          <div>
+            <a href="" class="me-3"
+              ><i class="fa-solid fa-ship pe-1 icon-site-red"></i>SHOPPING</a
+            >
+            <a href="" class="me-3"
+              ><i class="fa-solid fa-globe pe-1 icon-site-red"></i>SHIP
+              ANYWHERE</a
+            >
+            <a href="" class="me-3"
+              ><i class="fa-solid fa-truck-ramp-box pe-1 icon-site-red"></i>USA
+              TO BD CARGO</a
+            >
+            <a href="" class="me-3"
+              ><i class="fa-solid fa-shop pe-1 icon-site-red"></i>SHOP & SHIP</a
+            >
+            <a href="" class="me-3"
+              ><i class="fa-solid fa-user pe-1 icon-site-red"></i> VIEW
+              ACCOUNTS</a
+            >
+          </div>
+          <!-- Profile -->
+          <div>
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle pe-2"
+                type="button"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  class="rounded-circle p-0"
+                  width="50px"
+                  src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
+                  alt="profileImg"
+                />
+              </a>
+              <ul class="dropdown-menu border-0 shadow-lg text-end">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >My Profile <i class="fa-regular fa-user ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shipping List<i class="fa-solid fa-list ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Time Table
+                    <i class="fa-solid fa-table-cells-large ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shiping Status <i class="fa-solid fa-signal ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Log Out
+                    <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Page Content -->
+        <div>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="text-center" style="padding-top: 30px">
+                  <h3>SHIPPING INFORMATION</h3>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row" >
+              <div class="col-lg-8 col-offset-2 m-auto mt-2">
+                <div class="card">
+                  <div class="card-header bg-white">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <a href="#" class="back-btn"
+                        ><i class="fa-solid fa-arrow-left fa-fw"></i
+                      ></a>
+                      <p class="p-0 m-0">Shipping Form</p>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <form
+                      action=""
+                      method="post"
+                      class="needs-validation"
+                      novalidate
+                    >
+                      <!-- SENDER Start -->
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="">
+                            <p class="m-0 pe-4" style="border-bottom: 1px solid #eee;">
+                              SENDER <i class="fa-solid fa-arrow-right px-2"></i>
+                              <a
+                                href="javascript:void()"
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#sender-orgin"
+                                class=""
+                                style="
+                                  background-color: #f5f3f3c4;
+                                  padding: 10px;
+                                  font-size: 12px;
+                                "
+                                >Address Book <i class="fa-regular fa-eye"></i
+                              ></a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row pt-4">
+                        <div class="col-lg-6">
+                          <!-- Country Field -->
+                          <div class="mb-2">
+                            <label for="validationCustom03" class="form-label"
+                              >Country</label
+                            >
+                            <select
+                              class="form-select form-select-solid"
+                              id="validationCustom04"
+                              required
+                            >
+                              <option>Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">
+                              Please choose a username.
+                            </div>
+                          </div>
+                          <!-- Country Field End-->
+                        </div>
+                        <div class="col-lg-6">
+                          <!-- Country Field -->
+                          <div class="mb-2">
+                            <label for="validationCustom03" class="form-label"
+                              >Zip Code</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control form-control-solid form-control-sm"
+                              placeholder="Zip Code"
+                              id="validationCustom01"
+                              required
+                            />
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">
+                              Please choose a username.
+                            </div>
+                          </div>
+                          <!-- Country Field End-->
+                        </div>
+                      </div>
+                      <!-- SENDER End -->
+                      <!-- RECEIVER Start -->
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="">
+                            <p class="m-0 pe-4 text-end mt-4" style="border-bottom: 1px solid #eee;">
+                              <a
+                                href="javascript:void()"
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#receiver-orgin"
+                                class=""
+                                style="
+                                  background-color: #f5f3f3c4;
+                                  padding: 10px;
+                                  font-size: 12px;
+                                "
+                                >Address Book <i class="fa-regular fa-eye"></i
+                              ></a> <i class="fa-solid fa-arrow-left px-2"></i> RECEIVER
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row pt-4">
+                        <div class="col-lg-6">
+                          <!-- Country Field -->
+                          <div class="mb-2">
+                            <label for="validationCustom03" class="form-label"
+                              >Country</label
+                            >
+                            <select
+                              class="form-select form-select-solid"
+                              id="validationCustom04"
+                              required
+                            >
+                              <option>Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">
+                              Please choose a username.
+                            </div>
+                          </div>
+                          <!-- Country Field End-->
+                        </div>
+                        <div class="col-lg-6">
+                          <!-- Country Field -->
+                          <div class="mb-2">
+                            <label for="validationCustom03" class="form-label"
+                              >Zip Code</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control form-control-solid form-control-sm"
+                              placeholder="Zip Code"
+                              id="validationCustom01"
+                              required
+                            />
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">
+                              Please choose a username.
+                            </div>
+                          </div>
+                          <!-- Country Field End-->
+                        </div>
+                      </div>
+                      <!-- RECEIVER End -->
+                      <!-- Shipment Measurements -->
+                      <div class="row pt-4">
+                        <p class="mx-3 ps-0" style="border-bottom: 1px solid #eee;">Shipment Measurements <i class="fa-solid fa-arrow-right px-2"></i> LB/IN </p>
+                        <div class="col-lg-3">
+                          <label for="validationCustom03" class="form-label"
+                            >Weight <span class="text-danger">*</span></label
+                          >
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control form-control-sm" placeholder="Weight" aria-label="Weight" aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2">lb</span>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <label for="validationCustom03" class="form-label"
+                            >Length  <span class="text-danger">*</span></label
+                          >
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control form-control-sm" placeholder="Length" aria-label="Length" aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2">in</span>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <label for="validationCustom03" class="form-label"
+                              >Width  <span class="text-danger">*</span></label
+                            >
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control form-control-sm" placeholder="Width" aria-label="Width" aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2">in</span>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <label for="validationCustom03" class="form-label"
+                              >Height  <span class="text-danger">*</span></label
+                            >
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control form-control-sm" placeholder="Height" aria-label="Height" aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2">in</span>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <label for="validationCustom03" class="form-label"
+                              >Categories   <span class="text-danger">*</span></label
+                            >
+                          <div class="mb-3">
+                            <select class="js-example-basic-single form-select form-select-sm" name="state">
+                              <option value="AL">Alabama</option>
+                              <option value="AL">Alabama</option>
+                              <option value="AL">Alabama</option>
+                               
+                              <option value="WY">Wyoming</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-2 action-field">
+                          <label for="validationCustom03" class="form-label"
+                              >Insurance  <span class="text-danger">*</span></label
+                            >
+                          <div class="mb-3">
+                            <div class="form-check form-switch switch-box">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                              <label class="form-check-label" for="flexSwitchCheckDefault">Insurance</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 show-field" style="display: none;">
+                          <label for="validationCustom03" class="form-label"
+                              >Item value  <span class="text-danger">*</span></label
+                            >
+                          <div class="input-group mb-3">
+                            <input type="number" class="form-control form-control-sm" placeholder="Item value" aria-label="Item value" aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2">$</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="d-flex justify-content-end ">
+                            <button type="submit" class="btn btn-base">Submit</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Page Content End-->
+      </div>
+    </main>
+    <!-- All Modal Area Here -->
+    <!-- Selected origin Address  Modal-->
+    <div
+      class="modal fade"
+      id="sender-orgin"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Selected origin Address ...
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="table-responsive">
+              <table class="display tables" style="width: 100%">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>EMAIL</th>
+                    <th>PHONE NUMBER</th>
+                    <th>ZIP CODE</th>
+                    <th>STATE & CITY</th>
+                    <th>COUNTRY</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Unity Butler</td>
+                    <td>Marketing Designer</td>
+                    <td>San Francisco</td>
+                    <td>47</td>
+                    <td>2009-12-09</td>
+                    <td>$85,675</td>
+                    <td>$85,675</td>
+                  </tr>
+                  <tr>
+                    <td>Unity Butler</td>
+                    <td>Marketing Designer</td>
+                    <td>San Francisco</td>
+                    <td>47</td>
+                    <td>2009-12-09</td>
+                    <td>$85,675</td>
+                    <td>$85,675</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Selected destination Address  Modal-->
+    <div
+      class="modal fade"
+      id="receiver-orgin"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              Selected destination Address ...
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="table-responsive">
+              <table class="display tables" style="width: 100%">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>EMAIL</th>
+                    <th>PHONE NUMBER</th>
+                    <th>ZIP CODE</th>
+                    <th>STATE & CITY</th>
+                    <th>COUNTRY</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Unity Butler</td>
+                    <td>Marketing Designer</td>
+                    <td>San Francisco</td>
+                    <td>47</td>
+                    <td>2009-12-09</td>
+                    <td>$85,675</td>
+                    <td>$85,675</td>
+                  </tr>
+                  <tr>
+                    <td>Unity Butler</td>
+                    <td>Marketing Designer</td>
+                    <td>San Francisco</td>
+                    <td>47</td>
+                    <td>2009-12-09</td>
+                    <td>$85,675</td>
+                    <td>$85,675</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- All Modal Area Here ENd -->
+    <!-- back to top area start -->
+    <div class="back-to-top">
+      <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+    <!-- all plugins here -->
+    <script
+      src="https://kit.fontawesome.com/69b7156a94.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- main js  -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+    <script>
+      // jQuery code to toggle show-field based on switch-box state
+      $(document).ready(function () {
+          $('#flexSwitchCheckDefault').change(function () {
+              $('.show-field').toggle(this.checked);
+          });
+      });
+  </script>
+  </body>
+</html>
