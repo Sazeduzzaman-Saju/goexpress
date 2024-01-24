@@ -17,10 +17,17 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom_style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
   </head>
   <body>
@@ -153,7 +160,9 @@
       </div>
       <div class="home-section">
         <!-- Header Start -->
-        <div class="bg-white d-flex justify-content-between align-items-center user_header">
+        <div
+          class="bg-white d-flex justify-content-between align-items-center user_header"
+        >
           <!-- Toggler Icon -->
           <div class="home-content">
             <i class="fa-solid fa-right-left bx-menu"></i>
@@ -182,81 +191,164 @@
           <!-- Profile -->
           <div>
             <div class="dropdown">
-              <a class="dropdown-toggle pe-2" type="button" data-bs-auto-close="outside" aria-expanded="false" data-bs-toggle="dropdown" >
+              <a
+                class="dropdown-toggle pe-2"
+                type="button"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+              >
                 <img
-                  class="rounded-circle p-0" width="50px"
+                  class="rounded-circle p-0"
+                  width="50px"
                   src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
                   alt="profileImg"
                 />
               </a>
               <ul class="dropdown-menu border-0 shadow-lg text-end">
-                <li><a class="dropdown-item" href="#">My Profile <i class="fa-regular fa-user ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shipping List<i class="fa-solid fa-list ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Time Table <i class="fa-solid fa-table-cells-large ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shiping Status <i class="fa-solid fa-signal ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Log Out <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i></a></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >My Profile <i class="fa-regular fa-user ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shipping List<i class="fa-solid fa-list ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Time Table
+                    <i class="fa-solid fa-table-cells-large ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shiping Status <i class="fa-solid fa-signal ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Log Out
+                    <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i
+                  ></a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-         <!-- Header End -->
-        <div class="container-fluid">
+        <!-- Header End -->
+        <div class="container mb-4">
           <div class="row">
             <div class="col-lg-12">
-              <div class="text-center" style="padding-top: 30px;">
-                <h3>Comming Soon</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
+              <div class="text-center" style="padding-top: 30px;padding-bottom: 20px;">
+                <h3>Calculated Price</h3>
+                <p>
+                  Delivery From <strong class="text-danger">USA</strong> To
+                  <strong class="text-danger">Bangladesh</strong>
+                </p>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="d-flex justify-content-between align-items-center ">
-                    <h6>Shipment List</h6>
-                    <div>
-                      <button type="submit" class="btn btn-base">
-                        <i class="fa fa-plus"></i> Create New List
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
+            <div class="col-lg-8 col-offset-2 mx-auto">
+              <div class="card p-0">
+                <div class="card-body p-0">
                   <div class="table-responsive">
-                    <table class="display tables" style="width: 100%">
+                    <table class="table mb-0">
                       <thead>
                         <tr>
-                          <th>TRACKING</th>
-                          <th>COURIER</th>
-                          <th>NUMBER</th>
-                          <th>RECEIVER</th>
-                          <th>PRICE</th>
-                          <th>CREATED DATE</th>
-                          <th>STATUS</th>
-                          <th>ACTION</th>
+                          <th style="font-size: 16px;">Name</th>
+                          <th style="font-size: 16px;">Details</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td>$85,675</td>
+                          <td>
+                            <p class="m-0">Product Link</p>
+                          </td>
+                          <td><a
+                            href="https://www.amazon.com/Color-Dream-Supernatural-Spray-Multi-award-winning/dp/B073CWSQ51/ref=sr_1_1?keywords=products&qid=1705939462&sr=8-1"
+                            class="bg-primary badge text-white"
+                            >Product Link</a
+                          ></td>
                         </tr>
                         <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td>$85,675</td>
+                          <td><p class="m-0">Product Name</p></td>
+                          <td>
+                            Color-Dream-Supernatural-Spray-Multi-award-winning
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><p class="m-0">Product Weight/Piece</p></td>
+                          <td>200 grm</td>
+                        </tr>
+                        <tr>
+                          <td><p class="m-0">Category</p></td>
+                          <td>Others</td>
+                        </tr>
+                        <tr>
+                          <td><p class="m-0">Color</p></td>
+                          <td>Red</td>
+                        </tr>
+                        <tr>
+                          <td><p class="m-0">Size</p></td>
+                          <td>200 cm</td>
+                        </tr>
+                        <tr>
+                          <td><p class="m-0">Quantity</p></td>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <td><p class="m-0">Product Price</p></td>
+                          <td>৳ 2,760.00</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p class="m-0">
+                              USA Sales Tax
+                              <i
+                                class="fa-solid fa-circle-info site-red-color"
+                                data-bs-toggle="tooltip"
+                                title="Sales tax Note : Purchase from New York, USA, customer need to pay 8.87% tax on top of product price. It is USA federal rules."
+                              ></i>
+                            </p>
+                          </td>
+                          <td>৳ 240.12</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p class="m-0">
+                              Shipping Charge -USA to BD 
+                              <i
+                                class="fa-solid fa-circle-info site-red-color"
+                                data-bs-toggle="tooltip"
+                                title="Shipping Note : Final weight will be informed to your invoice (if need) before home delivery."
+                              ></i>
+                            </p>
+                          </td>
+                          <td>৳ 0</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p class="m-0">
+                              Processing Fee
+                              <i
+                                class="fa-solid fa-circle-info site-red-color"
+                                data-bs-toggle="tooltip"
+                                title="Processing Fee Note : Processing fees are dollar conversion rate variation, Bank transfer cost to overseas operation, business operation cost and finally woow profit margin 5-7%."
+                              ></i>
+                            </p>
+                          </td>
+                          <td>৳ 276.00</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <h5 class="m-0"><strong class="site-red-color">Total</strong></h5>
+                          </td>
+                          <td>
+                            <h5 class="m-0"><strong class="site-red-color">৳ 2,760.00</strong></h5>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
@@ -264,6 +356,17 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-lg-8 col-offset-2 mx-auto">
+              <h6 class="text-danger">Disclaimer</h6>
+              <p>This calculative price based on your provided information.Price may vary depend on actual weight & category. You will get revise invoice before product delivery to your door steps.</p>
+            </div>
+            <div class="col-lg-8 col-offset-2 mx-auto">
+              <div class="d-flex justify-content-end ">
+                <a href="shipping-address.html" class="admin-btn-one w-lg-25 w-25">Contine <i class="ps-2 fa-solid fa-arrow-right-long"></i></a>
+              </div>
+          </div>
           </div>
         </div>
       </div>
@@ -277,29 +380,16 @@
 
     <!-- all plugins here -->
     <script
-    src="https://kit.fontawesome.com/69b7156a94.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="assets/js/vendor.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+      src="https://kit.fontawesome.com/69b7156a94.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
-    <script>
-      let arrow = document.querySelectorAll(".arrow");
-      for (var i = 0; i < arrow.length; i++) {
-        arrow[i].addEventListener("click", (e) => {
-          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
-          arrowParent.classList.toggle("showMenu");
-        });
-      }
-      let sidebar = document.querySelector(".sidebar");
-      let sidebarBtn = document.querySelector(".bx-menu");
-      console.log(sidebarBtn);
-      sidebarBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("close");
-      });
-    </script>
   </body>
 </html>

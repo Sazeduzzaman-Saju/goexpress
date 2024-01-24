@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GoExpress - Transport & Logistics Service</title>
+    <link
+      rel="icon"
+      href="assets/img/favicon.png"
+      sizes="20x20"
+      type="image/png"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/vendor.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/custom_style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+  </head>
+  <body>
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-inner">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- search popup start-->
+    <div class="body-overlay" id="body-overlay"></div>
+    <div class="td-search-popup" id="td-search-popup">
+      <form action="home.html" class="search-form">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search....." />
+        </div>
+        <button type="submit" class="submit-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+    </div>
+    <!-- search popup end-->
+    <main>
+      <div class="sidebar">
+        <div class="logo-details">
+          <img src="https://i.ibb.co/x27VjRM/Go-Express-LOGO.png" alt="" />
+        </div>
+        <ul class="nav-links">
+          <li class="active">
+            <a href="user-dashboard.html">
+              <i class="fa-solid fa-house"></i>
+              <span class="link_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-globe"></i>
+                <span class="link_name">Ship Anywhere</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="shipment-anywhere.html">Shipment Anywhere</a></li>
+              <li><a href="create-shipment.html">Create Shipment</a></li>
+              <li><a href="shipment-list.html">Shipment List</a></li>
+              <li><a href="pickup.html">Pickup</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-ship"></i>
+                <span class="link_name">Shipping Supply</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="#">USPS - Free of Cost.</a></li>
+              <li><a href="#">USPS - Free of Cost.</a></li>
+              <li><a href="#">FedEx - Free of Cost.</a></li>
+              <li><a href="#">DHL - Free of Cost.</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span class="link_name">Booking Parcel</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="#">Create Booking</a></li>
+              <li><a href="booking-list.html">Booking List</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span class="link_name">Shop & Ship</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="payment-due.html">Payment Due</a></li>
+              <li><a href="ongoing-order.html">Ongoing Orders</a></li>
+              <li><a href="delivered-order.html">Delivered Orders</a></li>
+              <li><a href="cancelled-orders.html">Cancelled Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-house"></i>
+                <span class="link_name">Accesories</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="#">Payment Due</a></li>
+              <li><a href="#">Ongoing Orders</a></li>
+              <li><a href="#">Delivered Orders</a></li>
+              <li><a href="#">Cancelled Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="profile-details">
+              <div class="profile-content">
+                <img
+                  class="rounded-circle"
+                  src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
+                  alt="profileImg"
+                />
+              </div>
+              <div class="name-job">
+                <div class="profile_name">Sazeduzzaman</div>
+                <div class="job">Web Desginer</div>
+              </div>
+              <i class="fa-solid fa-right-from-bracket text-white"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="home-section">
+        <!-- Header Start -->
+        <div
+          class="bg-white d-flex justify-content-between align-items-center user_header"
+        >
+          <!-- Toggler Icon -->
+          <div class="home-content">
+            <i class="fa-solid fa-right-left bx-menu"></i>
+          </div>
+          <!-- Header Menu -->
+          <div>
+            <a href="shop-form.html" class="me-3 header-nav-btn"
+              ><i class="fa-solid fa-ship pe-1 icon-site-red"></i>SHOPPING</a
+            >
+            <a href="" class="me-3 header-nav-btn"
+              ><i class="fa-solid fa-globe pe-1 icon-site-red"></i>SHIP
+              ANYWHERE</a
+            >
+            <a href="" class="me-3 header-nav-btn"
+              ><i class="fa-solid fa-truck-ramp-box pe-1 icon-site-red"></i>USA
+              TO BD CARGO</a
+            >
+            <a href="" class="me-3 header-nav-btn"
+              ><i class="fa-solid fa-shop pe-1 icon-site-red"></i>SHOP & SHIP</a
+            >
+            <a href="" class="me-3 header-nav-btn"
+              ><i class="fa-solid fa-user pe-1 icon-site-red"></i> VIEW
+              ACCOUNTS</a
+            >
+          </div>
+          <!-- Profile -->
+          <div>
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle pe-2"
+                type="button"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  class="rounded-circle p-0"
+                  width="50px"
+                  src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
+                  alt="profileImg"
+                />
+              </a>
+              <ul class="dropdown-menu border-0 shadow-lg text-end">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >My Profile <i class="fa-regular fa-user ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shipping List<i class="fa-solid fa-list ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Time Table
+                    <i class="fa-solid fa-table-cells-large ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shiping Status <i class="fa-solid fa-signal ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Log Out
+                    <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Header End -->
+        <div class="container mb-4">
+          <div class="row">
+            <div class="col-lg-12">
+              <div
+                class="text-center"
+                style="padding-top: 30px; padding-bottom: 20px"
+              >
+                <h3>Calculated Price</h3>
+                <p style="border-bottom: 1px solid #eee; height: 20px; font-size: 20px;">
+                  Delivery From <strong class="text-danger">USA</strong> To
+                  <strong class="text-danger">Bangladesh</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <form action="" method="get">
+            <div class="row">
+              <div class="col-lg-12">
+                <h5 class="m-0">Choose Delivery Method</h5>
+                <ul
+                  class="nav nav-tabs delivery-methods-tabs"
+                  id="myTab"
+                  role="tablist"
+                >
+                  <li class="nav-item me-2" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="home-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#home-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="home-tab-pane"
+                      aria-selected="true"
+                    >
+                      <div class="d-flex flex-column tabs-icons">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="58.005"
+                            height="58"
+                            viewBox="0 0 58.005 58"
+                          >
+                            <g
+                              id="Home_delivery"
+                              data-name="Home delivery"
+                              transform="translate(-3 -3)"
+                            >
+                              <path
+                                id="Path_181"
+                                data-name="Path 181"
+                                d="M7,24.517V57H56V23.9L32,9Z"
+                                fill="#ffd600"
+                              ></path>
+                              <path
+                                id="Path_182"
+                                data-name="Path 182"
+                                d="M32,9,7,24.517v2L32,11,56,25.9v-2Z"
+                                fill="#ffd600"
+                              ></path>
+                              <path
+                                id="Path_183"
+                                data-name="Path 183"
+                                d="M33,37H61V61H33Z"
+                                fill="#cba57c"
+                              ></path>
+                              <path
+                                id="Path_184"
+                                data-name="Path 184"
+                                d="M59,37V51a6,6,0,0,1-6,6H33v4H61V37Z"
+                                fill="#c49a6c"
+                              ></path>
+                              <path
+                                id="Path_185"
+                                data-name="Path 185"
+                                d="M49,31l1,6H61l-4-6Z"
+                                fill="#a97c50"
+                              ></path>
+                              <path
+                                id="Path_186"
+                                data-name="Path 186"
+                                d="M45,31H37l-4,6H44Z"
+                                fill="#a97c50"
+                              ></path>
+                              <path
+                                id="Path_187"
+                                data-name="Path 187"
+                                d="M44,47l3-2,3,2V37H44Z"
+                                fill="#ffb655"
+                              ></path>
+                              <path
+                                id="Path_188"
+                                data-name="Path 188"
+                                d="M50,37l-1-6H45l-1,6Z"
+                                fill="#ff9811"
+                              ></path>
+                              <path
+                                id="Path_189"
+                                data-name="Path 189"
+                                d="M13,33H27V57H13Z"
+                                fill="#58595b"
+                              ></path>
+                              <path
+                                id="Path_190"
+                                data-name="Path 190"
+                                d="M32,16a5,5,0,0,0-5,5h5Z"
+                                fill="#ff9811"
+                              ></path>
+                              <path
+                                id="Path_191"
+                                data-name="Path 191"
+                                d="M32,21H27a5,5,0,0,0,5,5Z"
+                                fill="#ff9811"
+                              ></path>
+                              <path
+                                id="Path_192"
+                                data-name="Path 192"
+                                d="M37,21a5,5,0,0,0-5-5v5Z"
+                                fill="#ff9811"
+                              ></path>
+                              <path
+                                id="Path_193"
+                                data-name="Path 193"
+                                d="M32,26a5,5,0,0,0,5-5H32Z"
+                                fill="#ff9811"
+                              ></path>
+                              <path
+                                id="Path_194"
+                                data-name="Path 194"
+                                d="M59.8,20.252,45,11.069,32,3,4.2,20.252a2.549,2.549,0,0,0,2.688,4.332L32,9,57.107,24.584A2.55,2.55,0,1,0,59.8,20.252Z"
+                                fill="#ffc107"
+                              ></path>
+                              <path
+                                id="Path_195"
+                                data-name="Path 195"
+                                d="M51,5H45v6.069l6,3.724Z"
+                                fill="#ff9811"
+                              ></path>
+                              <path
+                                id="Path_196"
+                                data-name="Path 196"
+                                d="M24,44H23a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Z"
+                                fill="#f1f2f2"
+                              ></path>
+                            </g>
+                          </svg>
+                        </div>
+                        <p>Home Delivery</p>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="nav-item me-2" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile-tab-pane"
+                      aria-selected="false"
+                    >
+                      <div class="d-flex flex-column tabs-icons">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="52.2"
+                            height="54"
+                            viewBox="0 0 52.2 54"
+                          >
+                            <g
+                              id="warehouse"
+                              transform="translate(-8.533 0.001)"
+                            >
+                              <path
+                                id="Path_197"
+                                data-name="Path 197"
+                                d="M60.338,17.256,35.138.156a.9.9,0,0,0-1.011,0l-25.2,17.1A.9.9,0,0,0,8.533,18V53.1a.9.9,0,0,0,.9.9h50.4a.9.9,0,0,0,.9-.9V18A.9.9,0,0,0,60.338,17.256Z"
+                                transform="translate(0 -0.001)"
+                                fill="#ffd600"
+                              ></path>
+                              <path
+                                id="Path_198"
+                                data-name="Path 198"
+                                d="M11.233,53.1V18a.9.9,0,0,1,.395-.745L35.983.728,35.138.155a.9.9,0,0,0-1.011,0l-25.2,17.1A.9.9,0,0,0,8.533,18V53.1a.9.9,0,0,0,.9.9h2.7A.9.9,0,0,1,11.233,53.1Z"
+                                transform="translate(0 0)"
+                                fill="#ffc107"
+                              ></path>
+                              <path
+                                id="Path_199"
+                                data-name="Path 199"
+                                d="M127.167,204.8h-32.4a.9.9,0,0,0-.9.9v30.6a.9.9,0,0,0,.9.9h32.4a.9.9,0,0,0,.9-.9V205.7A.9.9,0,0,0,127.167,204.8Z"
+                                transform="translate(-76.334 -183.201)"
+                                fill="#74757b"
+                              ></path>
+                              <path
+                                id="Path_200"
+                                data-name="Path 200"
+                                d="M94.767,204.8a.9.9,0,0,0-.9.9v30.6a.9.9,0,0,0,.9.9h1.8V204.8Z"
+                                transform="translate(-76.334 -183.201)"
+                                fill="#606268"
+                              ></path>
+                              <path
+                                id="Path_201"
+                                data-name="Path 201"
+                                d="M113.7,170.667h-36a.9.9,0,0,0-.9.9v3.6a.9.9,0,0,0,.9.9h36a.9.9,0,0,0,.9-.9v-3.6A.9.9,0,0,0,113.7,170.667Z"
+                                transform="translate(-61.068 -152.668)"
+                                fill="#c3c4c6"
+                              ></path>
+                              <path
+                                id="Path_202"
+                                data-name="Path 202"
+                                d="M113.7,197.167h-36a.9.9,0,0,1-.9-.9v1.8a.9.9,0,0,0,.9.9h36a.9.9,0,0,0,.9-.9v-1.8A.9.9,0,0,1,113.7,197.167Z"
+                                transform="translate(-61.068 -175.568)"
+                                fill="#afb0b4"
+                              ></path>
+                              <g
+                                id="Group_346"
+                                data-name="Group 346"
+                                transform="translate(30.133 6.3)"
+                              >
+                                <path
+                                  id="Path_203"
+                                  data-name="Path 203"
+                                  d="M221.434,61.534h-7.2a.9.9,0,0,1,0-1.8h7.2a.9.9,0,0,1,0,1.8Z"
+                                  transform="translate(-213.334 -59.734)"
+                                  fill="#ffc107"
+                                ></path>
+                                <path
+                                  id="Path_204"
+                                  data-name="Path 204"
+                                  d="M221.434,95.668h-7.2a.9.9,0,0,1,0-1.8h7.2a.9.9,0,0,1,0,1.8Z"
+                                  transform="translate(-213.334 -90.268)"
+                                  fill="#ffc107"
+                                ></path>
+                                <path
+                                  id="Path_205"
+                                  data-name="Path 205"
+                                  d="M221.434,129.8h-7.2a.9.9,0,1,1,0-1.8h7.2a.9.9,0,0,1,0,1.8Z"
+                                  transform="translate(-213.334 -120.801)"
+                                  fill="#ffc107"
+                                ></path>
+                              </g>
+                              <g
+                                id="Group_347"
+                                data-name="Group 347"
+                                transform="translate(22.033 28.799)"
+                              >
+                                <path
+                                  id="Path_206"
+                                  data-name="Path 206"
+                                  d="M105.567,273.067h-10.8a.9.9,0,0,0-.9.9v10.8a.9.9,0,0,0,.9.9l5.4.9,5.4-.9a.9.9,0,0,0,.9-.9v-10.8A.9.9,0,0,0,105.567,273.067Z"
+                                  transform="translate(-93.867 -273.067)"
+                                  fill="#fddd85"
+                                ></path>
+                                <path
+                                  id="Path_207"
+                                  data-name="Path 207"
+                                  d="M105.567,392.534h-10.8a.9.9,0,0,0-.9.9v10.8a.9.9,0,0,0,.9.9h10.8a.9.9,0,0,0,.9-.9v-10.8A.9.9,0,0,0,105.567,392.534Z"
+                                  transform="translate(-93.867 -379.934)"
+                                  fill="#fddd85"
+                                ></path>
+                              </g>
+                              <path
+                                id="Path_208"
+                                data-name="Path 208"
+                                d="M95.667,404.234v-10.8a.9.9,0,0,1,.9-.9h-1.8a.9.9,0,0,0-.9.9v10.8a.9.9,0,0,0,.9.9h1.8A.9.9,0,0,1,95.667,404.234Z"
+                                transform="translate(-71.834 -351.135)"
+                                fill="#fdd042"
+                              ></path>
+                              <path
+                                id="Path_209"
+                                data-name="Path 209"
+                                d="M140.134,392.534h-3.6v4.5a.9.9,0,0,0,.9.9h1.8a.9.9,0,0,0,.9-.9Z"
+                                transform="translate(-110.001 -351.135)"
+                                fill="#f2c127"
+                              ></path>
+                              <path
+                                id="Path_210"
+                                data-name="Path 210"
+                                d="M132.5,479.668h-3.6a.9.9,0,1,1,0-1.8h3.6a.9.9,0,1,1,0,1.8Z"
+                                transform="translate(-102.368 -427.469)"
+                                fill="#74757b"
+                              ></path>
+                              <path
+                                id="Path_211"
+                                data-name="Path 211"
+                                d="M95.667,284.767v-10.8a.9.9,0,0,1,.9-.9h-1.8a.9.9,0,0,0-.9.9v10.8a.9.9,0,0,0,.9.9h1.8A.9.9,0,0,1,95.667,284.767Z"
+                                transform="translate(-71.834 -244.268)"
+                                fill="#fdd042"
+                              ></path>
+                              <path
+                                id="Path_212"
+                                data-name="Path 212"
+                                d="M140.134,273.067h-3.6v4.5a.9.9,0,0,0,.9.9h1.8a.9.9,0,0,0,.9-.9Z"
+                                transform="translate(-110.001 -244.268)"
+                                fill="#f2c127"
+                              ></path>
+                              <path
+                                id="Path_213"
+                                data-name="Path 213"
+                                d="M132.5,360.2h-3.6a.9.9,0,0,1,0-1.8h3.6a.9.9,0,1,1,0,1.8Z"
+                                transform="translate(-102.368 -320.602)"
+                                fill="#74757b"
+                              ></path>
+                              <path
+                                id="Path_214"
+                                data-name="Path 214"
+                                d="M225.034,392.534h-10.8a.9.9,0,0,0-.9.9v10.8a.9.9,0,0,0,.9.9h10.8a.9.9,0,0,0,.9-.9v-10.8A.9.9,0,0,0,225.034,392.534Z"
+                                transform="translate(-178.701 -351.135)"
+                                fill="#fddd85"
+                              ></path>
+                              <path
+                                id="Path_215"
+                                data-name="Path 215"
+                                d="M215.133,404.234v-10.8a.9.9,0,0,1,.9-.9h-1.8a.9.9,0,0,0-.9.9v10.8a.9.9,0,0,0,.9.9h1.8A.9.9,0,0,1,215.133,404.234Z"
+                                transform="translate(-178.7 -351.135)"
+                                fill="#fdd042"
+                              ></path>
+                              <path
+                                id="Path_216"
+                                data-name="Path 216"
+                                d="M259.6,392.534H256v4.5a.9.9,0,0,0,.9.9h1.8a.9.9,0,0,0,.9-.9v-4.5Z"
+                                transform="translate(-216.867 -351.135)"
+                                fill="#f2c127"
+                              ></path>
+                              <path
+                                id="Path_217"
+                                data-name="Path 217"
+                                d="M251.967,479.668h-3.6a.9.9,0,1,1,0-1.8h3.6a.9.9,0,0,1,0,1.8Z"
+                                transform="translate(-209.234 -427.469)"
+                                fill="#74757b"
+                              ></path>
+                            </g>
+                          </svg>
+                        </div>
+                        <p>Warehouse Pickup</p>
+                      </div>
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="home-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                    tabindex="0"
+                  >
+                    <div class="row mt-5">
+                      <div class="col-lg-12">
+                        <h5>Select Local Courier</h5>
+                      </div>
+                      <div class="col-lg-12">
+                        <ul class="d-flex p-0" style="list-style-type: none">
+                          <li>
+                            <input
+                              type="checkbox"
+                              id="checkbox1"
+                              class="custom-checkbox p-0 m-0"
+                              checked
+                            />
+                            <label for="checkbox1" class="custom-label p-0"
+                              ><img
+                                src="https://pathao.com/bn/wp-content/uploads/sites/6/2019/02/Pathao_Logo-.svg"
+                            /></label>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              id="checkbox2"
+                              class="custom-checkbox p-0 m-0"
+                            />
+                            <label for="checkbox2" class="custom-label p-0"
+                              ><img
+                                src="https://redx.com.bd/images/new-redx-logo.svg"
+                            /></label>
+                          </li>
+                          <li>
+                            <input
+                              type="checkbox"
+                              id="checkbox3"
+                              class="custom-checkbox p-0 m-0"
+                            />
+                            <label for="checkbox3" class="custom-label p-0"
+                              ><img
+                                src="https://ecourier.com.bd/wp-content/themes/ecourier-2.0/images/logo.svg"
+                            /></label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="card">
+                          <div class="card-header bg-white">
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <h5 class="m-0">Choose Delivery Address</h5>
+                              <button
+                                type="button"
+                                class="admin-btn-one"
+                                data-bs-toggle="modal"
+                                data-bs-target="#add-new-address"
+                                style="width: 15%"
+                              >
+                                <i
+                                  class="fa-solid fa-file-circle-plus pe-2"
+                                ></i>
+                                New Address
+                              </button>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <ul class="d-flex" style="list-style-type: none">
+                              <li>
+                                <input
+                                  type="checkbox"
+                                  id="checkbox4"
+                                  class="custom-checkbox p-0 m-0"
+                                />
+                                <label
+                                  for="checkbox4"
+                                  class="p-0 custom-label"
+                                  style="padding: 0 !important"
+                                >
+                                  <div class="card border-0">
+                                    <div
+                                      class="card-header site-red text-white"
+                                    >
+                                      <strong>Shipping Address</strong>
+                                    </div>
+                                    <div class="card-body">
+                                      <p>Name : MD Mahbub Alam (Sumon)</p>
+                                      <p>Phone Number : +8801769696662</p>
+                                      <p>Email : example@gmail.com</p>
+                                      <p>
+                                        Address : Ambit Green Homes,3/3 abc
+                                        South Mugdapara Flat #3B , Dhaka-1214
+                                        Phone:01769-696662
+                                      </p>
+                                    </div>
+                                  </div>
+                                </label>
+                              </li>
+                              <li>
+                                <input
+                                  type="checkbox"
+                                  id="checkbox5"
+                                  class="custom-checkbox p-0 m-0"
+                                />
+                                <label
+                                  for="checkbox5"
+                                  class="p-0 custom-label"
+                                  style="padding: 0 !important"
+                                >
+                                  <div class="card border-0">
+                                    <div
+                                      class="card-header site-red text-white"
+                                    >
+                                      <strong>Shipping Address</strong>
+                                    </div>
+                                    <div class="card-body">
+                                      <p>Name : MD Mahbub Alam (Sumon)</p>
+                                      <p>Phone Number : +8801769696662</p>
+                                      <p>Email : example@gmail.com</p>
+                                      <p>
+                                        Address : Ambit Green Homes,3/3 abc
+                                        South Mugdapara Flat #3B , Dhaka-1214
+                                        Phone:01769-696662
+                                      </p>
+                                    </div>
+                                  </div>
+                                </label>
+                              </li>
+                              <li>
+                                <input
+                                  type="checkbox"
+                                  id="checkbox6"
+                                  class="custom-checkbox p-0 m-0"
+                                />
+                                <label
+                                  for="checkbox6"
+                                  class="p-0 custom-label"
+                                  style="padding: 0 !important"
+                                >
+                                  <div class="card border-0">
+                                    <div
+                                      class="card-header site-red text-white"
+                                    >
+                                      <strong>Shipping Address</strong>
+                                    </div>
+                                    <div class="card-body">
+                                      <p>Name : MD Mahbub Alam (Sumon)</p>
+                                      <p>Phone Number : +8801769696662</p>
+                                      <p>Email : example@gmail.com</p>
+                                      <p>
+                                        Address : Ambit Green Homes,3/3 abc
+                                        South Mugdapara Flat #3B , Dhaka-1214
+                                        Phone:01769-696662
+                                      </p>
+                                    </div>
+                                  </div>
+                                </label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="profile-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                    tabindex="0"
+                  >
+                  <ul class="d-flex p-0 mt-4" style="list-style-type: none">
+                    <li>
+                      <h5>Choose Warehouse Address</h5>
+                      <input
+                        type="checkbox"
+                        id="checkbox7"
+                        class="custom-checkbox p-0 m-0"
+                      />
+                      <label
+                        for="checkbox7"
+                        class="p-0 custom-label"
+                        style="padding: 0 !important"
+                      >
+                        <div class="card border-0">
+                          <div
+                            class="card-header site-red text-white"
+                          >
+                            <strong>Shipping Address</strong>
+                          </div>
+                          <div class="card-body">
+                            <p>Name : MD Mahbub Alam (Sumon)</p>
+                            <p>Phone Number : +8801769696662</p>
+                            <p>Email : example@gmail.com</p>
+                            <p>
+                              Address : Ambit Green Homes,3/3 abc
+                              South Mugdapara Flat #3B , Dhaka-1214
+                              Phone:01769-696662
+                            </p>
+                          </div>
+                        </div>
+                      </label>
+                    </li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-lg-12">
+                <div class="d-flex justify-content-center">
+                  <button
+                    type="submit"
+                    class="admin-btn-one me-3"
+                    style="width: 10%"
+                  >
+                    Submit <i class="fa-regular fa-circle-check ps-2"></i>
+                  </button>
+                  <a href="ongoing-order.html" class="admin-btn-one" style="width: 20%">
+                    Need Help With Shipping
+                    <i class="fa-solid fa-headset ps-2"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="row mt-4">
+            <div class="col-lg-12">
+              <div class="d-flex justify-content-center">
+                <img
+                  class="img-fluid"
+                  width="1920px"
+                  src="https://i.ibb.co/BzdLKQ5/processed.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- All Modal Start -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="add-new-address"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="add-new-addressLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="add-new-addressLabel">
+              Add Address
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+        </div>
+      </div>
+    </div>
+    <!-- All Modal End -->
+    <!-- back to top area start -->
+    <div class="back-to-top">
+      <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+    <!-- all plugins here -->
+    <script
+      src="https://kit.fontawesome.com/69b7156a94.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- main js  -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+  </body>
+</html>

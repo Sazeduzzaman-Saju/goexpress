@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GoExpress - Transport & Logistics Service</title>
+    <link
+      rel="icon"
+      href="assets/img/favicon.png"
+      sizes="20x20"
+      type="image/png"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/vendor.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/custom_style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <style>
+      .input-groups {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+      }
+      .buttons {
+        font-size: 20px;
+        cursor: pointer;
+        border: 1px solid #fff200;
+        padding: 0px 12px;
+        border-radius: 50%;
+        margin: 2px;
+        background: #fff200;
+        color: #000;
+      }
+
+      .buttons:hover {
+        background-color: #ed1c24;
+        border: 1px solid #ed1c24;
+        color: white;
+      }
+      .card.new-item {
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+      }
+
+      .row-dragging .card.new-item {
+        transition: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-inner">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
+        </div>
+      </div>
+    </div>
+    <!-- preloader area end -->
+
+    <!-- search popup start-->
+    <div class="body-overlay" id="body-overlay"></div>
+    <div class="td-search-popup" id="td-search-popup">
+      <form action="home.html" class="search-form">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search....." />
+        </div>
+        <button type="submit" class="submit-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+    </div>
+    <!-- search popup end-->
+    <main>
+      <div class="sidebar">
+        <div class="logo-details">
+          <img src="https://i.ibb.co/x27VjRM/Go-Express-LOGO.png" alt="" />
+        </div>
+        <ul class="nav-links">
+          <li class="active">
+            <a href="user-dashboard.html">
+              <i class="fa-solid fa-house"></i>
+              <span class="link_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-globe"></i>
+                <span class="link_name">Ship Anywhere</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="shipment-anywhere.html">Shipment Anywhere</a></li>
+              <li><a href="create-shipment.html">Create Shipment</a></li>
+              <li><a href="shipment-list.html">Shipment List</a></li>
+              <li><a href="pickup.html">Pickup</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-ship"></i>
+                <span class="link_name">Shipping Supply</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="#">USPS - Free of Cost.</a></li>
+              <li><a href="#">USPS - Free of Cost.</a></li>
+              <li><a href="#">FedEx - Free of Cost.</a></li>
+              <li><a href="#">DHL - Free of Cost.</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span class="link_name">Booking Parcel</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="#">Create Booking</a></li>
+              <li><a href="booking-list.html">Booking List</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span class="link_name">Shop & Ship</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="payment-due.html">Payment Due</a></li>
+              <li><a href="ongoing-order.html">Ongoing Orders</a></li>
+              <li><a href="delivered-order.html">Delivered Orders</a></li>
+              <li><a href="cancelled-orders.html">Cancelled Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-house"></i>
+                <span class="link_name">Accesories</span>
+              </a>
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a href="#">Payment Due</a></li>
+              <li><a href="#">Ongoing Orders</a></li>
+              <li><a href="#">Delivered Orders</a></li>
+              <li><a href="#">Cancelled Orders</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="profile-details">
+              <div class="profile-content">
+                <img
+                  class="rounded-circle"
+                  src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
+                  alt="profileImg"
+                />
+              </div>
+              <div class="name-job">
+                <div class="profile_name">Sazeduzzaman</div>
+                <div class="job">Web Desginer</div>
+              </div>
+              <i class="fa-solid fa-right-from-bracket text-white"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="home-section">
+        <!-- Header Start -->
+        <div
+          class="bg-white d-flex justify-content-between align-items-center user_header"
+        >
+          <!-- Toggler Icon -->
+          <div class="home-content">
+            <i class="fa-solid fa-right-left bx-menu"></i>
+          </div>
+          <!-- Header Menu -->
+          <div>
+            <a href="shop-form.html" class="me-3 header-nav-btn"
+              ><i class="fa-solid fa-ship pe-1 icon-site-red"></i>SHOPPING</a
+            >
+            <a href="" class="me-3 header-nav-btn"
+              ><i class="fa-solid fa-globe pe-1 icon-site-red"></i>SHIP
+              ANYWHERE</a
+            >
+            <a href="" class="me-3 header-nav-btn"
+              ><i class="fa-solid fa-truck-ramp-box pe-1 icon-site-red"></i>USA
+              TO BD CARGO</a
+            >
+            <a href="" class="me-3 header-nav-btn"
+              ><i class="fa-solid fa-shop pe-1 icon-site-red"></i>SHOP & SHIP</a
+            >
+            <a href="" class="me-3 header-nav-btn"
+              ><i class="fa-solid fa-user pe-1 icon-site-red"></i> VIEW
+              ACCOUNTS</a
+            >
+          </div>
+          <!-- Profile -->
+          <div>
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle pe-2"
+                type="button"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  class="rounded-circle p-0"
+                  width="50px"
+                  src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
+                  alt="profileImg"
+                />
+              </a>
+              <ul class="dropdown-menu border-0 shadow-lg text-end">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >My Profile <i class="fa-regular fa-user ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shipping List<i class="fa-solid fa-list ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Time Table
+                    <i class="fa-solid fa-table-cells-large ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shiping Status <i class="fa-solid fa-signal ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Log Out
+                    <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Header End -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="text-center" style="padding-top: 30px">
+                <h3>Shopping</h3>
+                <p>Do You Have More Links click here</p>
+                <!-- Bulk Upload Start -->
+                <div class="btn-group">
+                  <button type="button" class="admin-btn-one me-2">
+                    Upload Excel
+                  </button>
+                  <button type="button" class="admin-btn-two">
+                    Download File
+                  </button>
+                </div>
+                <!-- Bulk Upload End -->
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 col-offset-2 mx-auto">
+              <form action="" class="my-4">
+                <div class="row repeater-default">
+                  <div data-repeater-list="" class="">
+                    <div data-repeater-item="" class="my-4 form-reater-items">
+                      <div class="col-lg-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <h6>Add Product Details</h6>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-11">
+                                  <div class="input-group mb-3">
+                                    <span
+                                      class="input-group-text"
+                                      id="basic-addon1"
+                                      ><i class="fa-solid fa-link"></i
+                                    ></span>
+                                    <input
+                                      type="text"
+                                      name="product_link"
+                                      class="form-control form-control-sm form-control-solid"
+                                      placeholder="Enter The Product Link"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="col-lg-1">
+                                  <!-- Delete Start -->
+                                  <div class="pt-1">
+                                    <span
+                                      data-repeater-delete=""
+                                      class="form-repeater-btn-delete"
+                                    >
+                                      <i class="fa-solid fa-trash"></i>
+                                    </span>
+                                  </div>
+                                  <!-- Delete end -->
+                                </div>
+                              </div>
+                              <div class="row p-1">
+                                <div class="col-lg-4">
+                                  <select
+                                    class="form-select form-select-solid"
+                                    name="from_country"
+                                  >
+                                    <option selected>From Country</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-4">
+                                  <select
+                                    class="form-select form-select-solid"
+                                    name="to_country"
+                                  >
+                                    <option selected>To Coountry</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-4">
+                                  <select
+                                    class="form-select form-select-solid"
+                                    name="cupon"
+                                  >
+                                    <option selected>
+                                      Coupon, Discount Code If Any
+                                    </option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-6">
+                                  <div class="my-3">
+                                    <input
+                                      type="email"
+                                      class="form-control form-control-sm form-control-solid"
+                                      name="email"
+                                      placeholder="name@example.com"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="my-3">
+                                    <input
+                                      type="number"
+                                      class="form-control form-control-sm form-control-solid"
+                                      name="product_weight"
+                                      placeholder="Product Weight In Grams"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="my-3">
+                                    <select
+                                      class="form-select form-select-solid"
+                                      name="category"
+                                    >
+                                      <option selected>Select Category</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="">
+                                    <input
+                                      type="text"
+                                      class="form-control form-control-sm form-control-solid"
+                                      name="prodcut_color"
+                                      placeholder="Color (exp: red)"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="">
+                                    <input
+                                      type="text"
+                                      class="form-control form-control-sm form-control-solid"
+                                      name="prodcut_model"
+                                      placeholder="Model & Size"
+                                    />
+                                  </div>
+                                </div>
+                                <!-- ... Other form elements ... -->
+                                <div class="col-lg-4">
+                                  <div class="input-groups">
+                                    <button
+                                      class="buttons decrementBtn"
+                                      type="button"
+                                    >
+                                      -
+                                    </button>
+                                    <input
+                                      type="number"
+                                      name="qty"
+                                      class="form-control form-control-sm inputQty"
+                                      style="text-align: center; width: 100%"
+                                      value="1"
+                                    />
+                                    <button
+                                      class="buttons border-0 incrementBtn"
+                                      type="button"
+                                    >
+                                      +
+                                    </button>
+                                  </div>
+                                </div>
+                                <!-- ... Other form elements ... -->
+                                <div class="col-lg-12">
+                                  <div class="mt-3">
+                                    <input
+                                      type="number"
+                                      class="form-control form-control-sm form-control-solid"
+                                      name="product_price"
+                                      placeholder="Product Price"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="notice">
+                      <p class="m-0 ps-3">
+                        <i
+                          class="fa-solid fa-triangle-exclamation pe-2 text-danger"
+                        ></i
+                        >Weight Charge
+                        <span class="text-danger">1650Taka/Kilo</span> General
+                        Goods , Minimum shipping charge
+                        <span class="text-danger">1650</span> taka applicable
+                        per shipment.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 mt-3">
+                    <div class="form-group">
+                      <div class="col-lg-12 d-flex justify-content-center">
+                        <!-- Repeater Add Button -->
+                        <div class="me-2">
+                          <span
+                            data-repeater-create=""
+                            class="admin-btn-one repeat-add"
+                          >
+                            <i class="fa-solid fa-file-circle-plus pe-2"></i>
+                            Add
+                          </span>
+                        </div>
+                        <div>
+                          <button
+                            type="submit"
+                            class="admin-btn-two"
+                            onclick="window.location.href='get-price.html';"
+                          >
+                            <i class="fa-solid fa-sack-dollar pe-2"></i>Get
+                            Price
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+      <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+    <!-- all plugins here -->
+    <script
+      src="https://kit.fontawesome.com/69b7156a94.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- main js  -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+    <!-- Form Repeater -->
+    <script>
+      $(document).ready(function () {
+        // Initialize the first repeater item
+        $(".drag").repeater({
+          initval: 1,
+          show: function () {
+            // Initialize accordion for the new item
+            initializeAccordion(this);
+          },
+        });
+
+        // Function to add a new form repeater item with a transition
+        function addRepeaterItem() {
+          var newItem = $(".repeater-default:first").clone();
+          newItem.find("input, select").val(""); // Clear input values
+          newItem.hide().insertAfter(".repeater-default:last"); // Insert after the last repeater item
+          newItem.repeater({ show: initializeAccordion }); // Initialize as a repeater item with show option
+          newItem.slideDown(400); // Add slideDown animation
+        }
+
+        // Initialize the sortable feature for dragging
+        $(".drag")
+          .sortable({
+            axis: "y",
+            cursor: "pointer",
+            opacity: 0.5,
+            placeholder: "row-dragging",
+            delay: 150,
+            update: function (event, ui) {
+              console.log("repeaterVal");
+              console.log($(".drag").repeaterVal());
+              console.log("serializeArray");
+              console.log($("form").serializeArray());
+            },
+          })
+          .disableSelection();
+
+        // Handle the click event to add a new form repeater item
+        $(".repeat-add").on("click", function () {
+          addRepeaterItem();
+        });
+
+        // Handle the form submission
+        $("form").on("submit", function (event) {
+          event.preventDefault();
+          console.log("Form submitted");
+          // Additional logic for form submission if needed
+        });
+
+        function initializeAccordion(element) {
+          $(element)
+            .find(".accordion")
+            .each(function (index) {
+              const uniqueID = `accordionItem${new Date().getTime() + index}`;
+              $(this)
+                .find(".accordion-button")
+                .attr("data-bs-target", `.${uniqueID}`);
+              $(this).find(".accordion-collapse").attr("id", uniqueID);
+            });
+
+          // Initialize accordion events for the new item
+          $(element)
+            .find(".accordion")
+            .on("show.bs.collapse", function () {
+              $(this).find(".accordion-button").removeClass("collapsed");
+            })
+            .on("hide.bs.collapse", function () {
+              $(this).find(".accordion-button").addClass("collapsed");
+            });
+        }
+      });
+    </script>
+    <!-- For incress & Dicress -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to handle the increment and decrement logic
+        function handleQuantityChange(action) {
+          const repeaterItem = action.closest(".form-reater-items");
+
+          if (repeaterItem) {
+            const input = repeaterItem.querySelector(".inputQty");
+            if (input) {
+              let counter = parseInt(input.value);
+
+              if (isNaN(counter)) {
+                counter = 0; // Set to 0 if not a valid number
+              }
+
+              if (action.classList.contains("incrementBtn")) {
+                counter++;
+              } else if (
+                action.classList.contains("decrementBtn") &&
+                counter > 0
+              ) {
+                counter--;
+              }
+
+              input.value = counter;
+            }
+          }
+        }
+
+        // Event delegation for dynamic elements
+        document.addEventListener("click", function (event) {
+          const target = event.target;
+          if (
+            target.classList.contains("incrementBtn") ||
+            target.classList.contains("decrementBtn")
+          ) {
+            handleQuantityChange(target);
+          }
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const repeaterItems = document.querySelectorAll(".form-reater-items");
+
+        repeaterItems.forEach((item, index) => {
+          const accordionButton = item.querySelector(".accordion-button");
+          const accordionCollapse = item.querySelector(".accordion-collapse");
+
+          // Generate unique IDs
+          const uniqueID = `accordionItem${index}`;
+          accordionButton.setAttribute("data-bs-target", `#${uniqueID}`);
+          accordionCollapse.setAttribute("id", uniqueID);
+        });
+      });
+    </script>
+  </body>
+</html>

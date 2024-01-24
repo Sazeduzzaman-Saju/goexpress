@@ -69,7 +69,6 @@
               <i class="fa-solid fa-chevron-down arrow"></i>
             </div>
             <ul class="sub-menu">
-              <li><a href="shipment-anywhere.html">Shipment Anywhere</a></li>
               <li><a href="create-shipment.html">Create Shipment</a></li>
               <li><a href="shipment-list.html">Shipment List</a></li>
               <li><a href="pickup.html">Pickup</a></li>
@@ -99,7 +98,7 @@
               <i class="fa-solid fa-chevron-down arrow"></i>
             </div>
             <ul class="sub-menu">
-              <li><a href="#">Create Booking</a></li>
+              <li><a href="create-booking.html">Create Booking</a></li>
               <li><a href="booking-list.html">Booking List</a></li>
             </ul>
           </li>
@@ -119,21 +118,6 @@
             </ul>
           </li>
           <li>
-            <div class="iocn-link">
-              <a href="#">
-                <i class="fa-solid fa-house"></i>
-                <span class="link_name">Accesories</span>
-              </a>
-              <i class="fa-solid fa-chevron-down arrow"></i>
-            </div>
-            <ul class="sub-menu">
-              <li><a href="#">Payment Due</a></li>
-              <li><a href="#">Ongoing Orders</a></li>
-              <li><a href="#">Delivered Orders</a></li>
-              <li><a href="#">Cancelled Orders</a></li>
-            </ul>
-          </li>
-          <li>
             <div class="profile-details">
               <div class="profile-content">
                 <img
@@ -149,10 +133,15 @@
               <i class="fa-solid fa-right-from-bracket text-white"></i>
             </div>
           </li>
+          <li class="active">
+            <a href="accounts.html">
+              <i class="fa-solid fa-clipboard-user"></i>
+              <span class="link_name">Accounts</span>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="home-section">
-        <!-- Header Start -->
         <div class="bg-white d-flex justify-content-between align-items-center user_header">
           <!-- Toggler Icon -->
           <div class="home-content">
@@ -199,64 +188,139 @@
             </div>
           </div>
         </div>
-         <!-- Header End -->
-        <div class="container-fluid">
+        <div class="container">
           <div class="row">
             <div class="col-lg-12">
               <div class="text-center" style="padding-top: 30px;">
-                <h3>Comming Soon</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <h3>Accounts Details..</h3>
+                <p>This Is Your Accounts Details Dashboard Where You See All Of You Accounts Details History!</p>
+              </div>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center " style="padding-top: 30px;">
+            <div class="col-lg-3">
+              <div class="card mb-4 dash-card-box" style="height: 13rem;">
+                <div class="card-body">
+                  <div>
+                    <!-- icons -->
+                    <div class="dash-card-icon">
+                      <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
+                    <!-- card-title -->
+                    <h6 class="pt-4">
+                      <p><span>USD Credit</span> </p>
+                      <h5 class=""><span class="site-red-color">$ 40.09</span></h5>
+                    </h6>
+                    <ul class="dash-card-link">
+                      <li><a href="">Add Founds</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card mb-4 dash-card-box" style="height: 13rem;">
+                <div class="card-body">
+                  <div>
+                    <!-- icons -->
+                    <div class="dash-card-icon">
+                      <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <!-- card-title -->
+                    <h6 class="pt-4">
+                      <p><span>BDT Credit</span> </p>
+                      <h5 class=""><span class="site-red-color">৳ 0.00</span></h5>
+                    </h6>
+                    <ul class="dash-card-link">
+                      <li><a href="">Add Founds</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card mb-4 dash-card-box" style="height: 13rem;">
+                <div class="card-body">
+                  <div>
+                    <!-- icons -->
+                    <div class="dash-card-icon">
+                      <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+                    <!-- card-title -->
+                    <h6 class="pt-4">
+                      <p><span>DUE AMOUNT</span> </p>
+                      <h5 class=""><span class="site-red-color">৳ 0.00</span></h5>
+                    </h6>
+                    <ul class="dash-card-link">
+                      <li><a href="">Pay</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card mb-4 dash-card-box" style="height: 13rem;">
+                <div class="card-body">
+                  <div>
+                    <!-- icons -->
+                    <div class="dash-card-icon">
+                      <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <!-- card-title -->
+                    <h6 class="pt-4">
+                      <p><span>COURIER COMMISSION</span> </p>
+                      <h5 class=""><span class="site-red-color">৳ 0.00</span></h5>
+                    </h6>
+                    <ul class="dash-card-link">
+                      <li><a href="">View Details</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-12">
               <div class="card">
-                <div class="card-header">
-                  <div class="d-flex justify-content-between align-items-center ">
-                    <h6>Shipment List</h6>
-                    <div>
-                      <button type="submit" class="btn btn-base">
-                        <i class="fa fa-plus"></i> Create New List
-                      </button>
-                    </div>
-                  </div>
+                <div class="card-header bg-white">
+                  <h6 class="m-0">Transaction History</h6>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="display tables" style="width: 100%">
                       <thead>
-                        <tr>
-                          <th>TRACKING</th>
-                          <th>COURIER</th>
-                          <th>NUMBER</th>
-                          <th>RECEIVER</th>
-                          <th>PRICE</th>
-                          <th>CREATED DATE</th>
-                          <th>STATUS</th>
-                          <th>ACTION</th>
+                        <tr>	
+                          <th class="text-center ">TRANSACTION ID</th>
+                          <th class="text-center ">DESCRIPTIONS</th>
+                          <th class="text-center ">TYPE</th>
+                          <th class="text-center ">AMOUNT</th>
+                          <th class="text-center ">METHOD</th>
+                          <th class="text-center ">STATUS</th>
+                          <th class="text-center ">DATE</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody class="text-center ">
                         <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td>$85,675</td>
+                          <td>USBD65b073f6a2659</td>
+                          <td>USA-BD Booking charge</td>
+                          <td>DEBIT</td>
+                          <td>-$33.75</td>
+                          <td>WALLET</td>
+                          <td><span class="badge bg-primary">Paid</span></td>
+                          <td>
+                            <span>Jan 24,2024 8:21AM</span>
+                          </td>
                         </tr>
                         <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td>$85,675</td>
+                          <td>USBD65b073f6a2659</td>
+                          <td>USA-BD Booking charge</td>
+                          <td>DEBIT</td>
+                          <td>-$33.75</td>
+                          <td>WALLET</td>
+                          <td><span class="badge bg-primary">Paid</span></td>
+                          <td>
+                            <span>Jan 24,2024 8:21AM</span>
+                          </td>
                         </tr>
                       </tbody>
                     </table>

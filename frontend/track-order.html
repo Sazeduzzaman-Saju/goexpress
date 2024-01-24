@@ -17,7 +17,10 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom_style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
@@ -69,7 +72,6 @@
               <i class="fa-solid fa-chevron-down arrow"></i>
             </div>
             <ul class="sub-menu">
-              <li><a href="shipment-anywhere.html">Shipment Anywhere</a></li>
               <li><a href="create-shipment.html">Create Shipment</a></li>
               <li><a href="shipment-list.html">Shipment List</a></li>
               <li><a href="pickup.html">Pickup</a></li>
@@ -99,7 +101,7 @@
               <i class="fa-solid fa-chevron-down arrow"></i>
             </div>
             <ul class="sub-menu">
-              <li><a href="#">Create Booking</a></li>
+              <li><a href="create-booking.html">Create Booking</a></li>
               <li><a href="booking-list.html">Booking List</a></li>
             </ul>
           </li>
@@ -119,21 +121,6 @@
             </ul>
           </li>
           <li>
-            <div class="iocn-link">
-              <a href="#">
-                <i class="fa-solid fa-house"></i>
-                <span class="link_name">Accesories</span>
-              </a>
-              <i class="fa-solid fa-chevron-down arrow"></i>
-            </div>
-            <ul class="sub-menu">
-              <li><a href="#">Payment Due</a></li>
-              <li><a href="#">Ongoing Orders</a></li>
-              <li><a href="#">Delivered Orders</a></li>
-              <li><a href="#">Cancelled Orders</a></li>
-            </ul>
-          </li>
-          <li>
             <div class="profile-details">
               <div class="profile-content">
                 <img
@@ -149,11 +136,18 @@
               <i class="fa-solid fa-right-from-bracket text-white"></i>
             </div>
           </li>
+          <li class="active">
+            <a href="accounts.html">
+              <i class="fa-solid fa-clipboard-user"></i>
+              <span class="link_name">Accounts</span>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="home-section">
-        <!-- Header Start -->
-        <div class="bg-white d-flex justify-content-between align-items-center user_header">
+        <div
+          class="bg-white d-flex justify-content-between align-items-center user_header"
+        >
           <!-- Toggler Icon -->
           <div class="home-content">
             <i class="fa-solid fa-right-left bx-menu"></i>
@@ -182,84 +176,97 @@
           <!-- Profile -->
           <div>
             <div class="dropdown">
-              <a class="dropdown-toggle pe-2" type="button" data-bs-auto-close="outside" aria-expanded="false" data-bs-toggle="dropdown" >
+              <a
+                class="dropdown-toggle pe-2"
+                type="button"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+              >
                 <img
-                  class="rounded-circle p-0" width="50px"
+                  class="rounded-circle p-0"
+                  width="50px"
                   src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
                   alt="profileImg"
                 />
               </a>
               <ul class="dropdown-menu border-0 shadow-lg text-end">
-                <li><a class="dropdown-item" href="#">My Profile <i class="fa-regular fa-user ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shipping List<i class="fa-solid fa-list ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Time Table <i class="fa-solid fa-table-cells-large ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shiping Status <i class="fa-solid fa-signal ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Log Out <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i></a></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >My Profile <i class="fa-regular fa-user ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shipping List<i class="fa-solid fa-list ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Time Table
+                    <i class="fa-solid fa-table-cells-large ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shiping Status <i class="fa-solid fa-signal ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Log Out
+                    <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i
+                  ></a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-         <!-- Header End -->
-        <div class="container-fluid">
+        <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <div class="text-center" style="padding-top: 30px;">
-                <h3>Comming Soon</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
+              <div class="text-center" style="padding-top: 30px">
+                <h3>Track Order..</h3>
+                <p>Track Anytime Anywhere! Track your order from here.</p>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="d-flex justify-content-between align-items-center ">
-                    <h6>Shipment List</h6>
-                    <div>
-                      <button type="submit" class="btn btn-base">
-                        <i class="fa fa-plus"></i> Create New List
-                      </button>
-                    </div>
+            <div class="col-lg-6 col-offset-3 mx-auto">
+              <form action="">
+                <div class="input-group mb-4">
+                  <input
+                    type="search"
+                    placeholder="Enter Your Order Id"
+                    class="form-control form-control-sm border-0 shadow-sm"
+                  />
+                  <div class="input-group-append">
+                    <button type="submit" class="track-btns">
+                      <i class="fa fa-search"></i>
+                    </button>
                   </div>
                 </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="display tables" style="width: 100%">
-                      <thead>
-                        <tr>
-                          <th>TRACKING</th>
-                          <th>COURIER</th>
-                          <th>NUMBER</th>
-                          <th>RECEIVER</th>
-                          <th>PRICE</th>
-                          <th>CREATED DATE</th>
-                          <th>STATUS</th>
-                          <th>ACTION</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td>$85,675</td>
-                        </tr>
-                        <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td>$85,675</td>
-                        </tr>
-                      </tbody>
-                    </table>
+              </form>
+            </div>
+            <div class="col-lg-8 col-offset-2 mx-auto " >
+              <div class="card">
+                <div class="card-header d-flex justify-content-center p-0 border-0 site-ylw">
+                  <div class="tracked-items">
+                    <h4 class="m-0 text-white">Track Your Order</h4>
+                  </div>
+                </div>
+                <div class="card-body p-5" style="background-color: hsla(0,0%,100%,.13);">
+                  <div class="justify-content-center">
+                    <h5 class="m-0 text-center">
+                      Please Type <span class="site-red-color">Order Id Or AWB Number</span> To Track Your Order
+                    </h5>
+                    <div class="d-flex justify-content-center pt-5">
+                      <img
+                        class="img-fluid"
+                        src="https://i.ibb.co/rcpwdn9/download.png"
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -277,13 +284,13 @@
 
     <!-- all plugins here -->
     <script
-    src="https://kit.fontawesome.com/69b7156a94.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="assets/js/vendor.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+      src="https://kit.fontawesome.com/69b7156a94.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
     <script>
