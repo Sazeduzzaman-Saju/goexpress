@@ -185,16 +185,15 @@
                       >
                         <form action="">
                           <div class="input-group mb-3">
-                            <select class="form-select" aria-label="Default select example" >
-                              <option selected>Select Country</option>
-                              <option value="1">Bangladesh</option>
-                              <option value="2">USA</option>
-                            </select>
-                            <input
-                              type="text"
-                              class="form-control"
-                              aria-label="Text input with dropdown button" 
-                            />
+                            <button class="dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            </ul>
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
                           </div>
                           <div class="mb-5">
                             <button type="submit" class="login-user-btn mb-2">Send OTP</button>
