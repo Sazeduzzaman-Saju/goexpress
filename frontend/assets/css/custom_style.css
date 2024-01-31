@@ -1178,7 +1178,29 @@ table:not(table-bordered) tr {
   border-color: goldenrod;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-
+.custom-multi-step{
+  color: goldenrod;
+}
+.nav-pills .custom-multi-step.active, .nav-pills .show>.custom-multi-step{
+  color: #fff;
+    background-color: #ed1c24 !important;
+}
+.multi-tab-btn {
+  background-color: #eee !important;
+  padding: 10px 50px 10px;
+  border: 1px !important;
+  border-color: #eee !important;
+  border-style: solid !important;
+  border-radius: 0px;
+}
+.multi-tab-btn.active {
+  background-color: #fff2005e !important;
+  padding: 10px 50px 10px;
+  border: 1px !important;
+  border-color: red !important;
+  border-style: dashed !important;
+  border-radius: 0px;
+}
 /* ================ Timeline Media Queries ================ */
 
 @media screen and (max-width: 660px) {
