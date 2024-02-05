@@ -270,7 +270,7 @@ body::-webkit-scrollbar-thumb {
 }
 .home-section {
   position: relative;
-  background: #fff;
+  background: #eee;
   min-height: 100vh;
   max-height: auto;
   left: 300px;
@@ -380,6 +380,7 @@ body::-webkit-scrollbar-thumb {
 .card-header {
   border-radius: 5px;
   border-bottom: 1px solid #eee;
+  background-color: #fff2001f !important;
 }
 .user-action-btn {
   background-color: #ed1c24;
@@ -435,10 +436,12 @@ body::-webkit-scrollbar-thumb {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .form-control-sm {
-  min-height: calc(1.5em + 1.1rem + 2px);
+  height: 40px;
   padding: 0.55rem 0.75rem;
   font-size: 0.95rem;
   border-radius: 0.425rem;
+  background: #f9f9f9;
+  border: none;
 }
 .form-control.form-control-solid {
   background-color: #f9f9f9;
@@ -555,17 +558,11 @@ table.dataTable tbody tr {
   font-size: 12px !important;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-  color: inherit !important;
-  border: none !important;
-  background-color: #eee !important;
-  border-radius: 50%;
-}
-.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
   color: white !important;
   border: none !important;
   background-color: #ed1c24 !important;
-  border-radius: 50%;
 }
+
 table.dataTable.no-footer {
   border-bottom: 1px solid #eee !important;
 }
@@ -630,7 +627,7 @@ table.dataTable > thead > tr > td {
 .checkbox-wrapper-47 label {
   line-height: 2;
   cursor: pointer;
-  border: 1px solid red;
+  border: 1px dashed #ed1c24;
   width: 100%;
   text-align: center !important;
 }
@@ -883,13 +880,13 @@ table.dataTable > thead > tr > td {
   text-align: start;
 }
 .tooltip-inner {
-  background-color: red; /* Replace with your desired background color */
+  background-color: #ed1c24; /* Replace with your desired background color */
   color: #fff; /* Optional: Set text color */
 }
 
 .tooltip.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
 .tooltip.bs-tooltip-bottom .arrow::before {
-  border-bottom-color: red; /* Same as the background color */
+  border-bottom-color: #ed1c24; /* Same as the background color */
 }
 
 table:not(table-bordered) td,
@@ -911,7 +908,7 @@ table:not(table-bordered) tr {
 }
 
 .custom-label {
-  border: 1px solid #eee;
+  border: 1px solid #ed1c24;
   padding: 0px 50px !important;
   display: block;
   position: relative;
@@ -1172,18 +1169,19 @@ table:not(table-bordered) tr {
 .barcode-container {
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid dashed red;
-  color: red;
+  border: 1px solid dashed #ed1c24;
+  color: #ed1c24;
   border-style: dashed;
   border-color: goldenrod;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.custom-multi-step{
+.custom-multi-step {
   color: goldenrod;
 }
-.nav-pills .custom-multi-step.active, .nav-pills .show>.custom-multi-step{
+.nav-pills .custom-multi-step.active,
+.nav-pills .show > .custom-multi-step {
   color: #fff;
-    background-color: #ed1c24 !important;
+  background-color: #ed1c24 !important;
 }
 .multi-tab-btn {
   background-color: #eee !important;
@@ -1197,10 +1195,41 @@ table:not(table-bordered) tr {
   background-color: #fff2005e !important;
   padding: 10px 50px 10px;
   border: 1px !important;
-  border-color: red !important;
+  border-color: #ed1c24 !important;
   border-style: dashed !important;
   border-radius: 0px;
 }
+
+.breadcrumb-item.active {
+  color: #ed1c24;
+}
+
+.select2-dropdown {
+  background-color: white;
+  border: none !important;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  left: -100000px;
+  width: 100%;
+  z-index: 1051;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: none !important;
+  background: #eeeeee9e !important;
+  border-radius: 3px;
+}
+.select2-container--default
+  .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #fff20024 !important;
+  color: #ed1c24 !important;
+}
+.form-label {
+  font-size: 12px !important;
+}
+
 /* ================ Timeline Media Queries ================ */
 
 @media screen and (max-width: 660px) {

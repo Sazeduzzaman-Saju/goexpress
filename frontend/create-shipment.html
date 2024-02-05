@@ -17,7 +17,10 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom_style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
@@ -137,7 +140,7 @@
           </li>
         </ul>
       </div>
-      <div class="home-section" style="height: 110vh; min-height: 100vh;">
+      <div class="home-section" style="height: 110vh; min-height: 100vh">
         <div
           class="bg-white d-flex justify-content-between align-items-center user_header"
         >
@@ -218,6 +221,21 @@
         <!-- Page Content -->
         <div>
           <div class="container-fluid">
+            <div class="row mt-3">
+              <div class="col-lg-12">
+                <nav class="breadcrumb mb-0">
+                  <a class="breadcrumb-item" href="user-dashboard.html"
+                    >Dashboard</a
+                  >
+                  <a class="breadcrumb-item" href="shipment-list.html"
+                    >Shipment List</a
+                  >
+                  <span class="breadcrumb-item active" aria-current="page"
+                    >Create Shipment</span
+                  >
+                </nav>
+              </div>
+            </div>
             <div class="row">
               <div class="col-lg-12">
                 <div class="text-center" style="padding-top: 30px">
@@ -227,250 +245,394 @@
               </div>
             </div>
           </div>
-          <div class="container">
-            <div class="row" >
-              <div class="col-lg-8 col-offset-2 m-auto mt-2">
-                <div class="card">
-                  <div class="card-header bg-white">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <a href="#" class="back-btn"
-                        ><i class="fa-solid fa-arrow-left fa-fw"></i
-                      ></a>
-                      <p class="p-0 m-0">Shipping Form</p>
+          <div class="container-fluid">
+            <form action="" method="post">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="card rounded-0">
+                            <div class="card-header p-0">
+                              <div
+                                class="d-flex justify-content-between align-items-center"
+                              >
+                                <p class="m-0 ps-2">
+                                  SENDER
+                                  <i
+                                    class="fa-solid fa-arrow-right px-2 site-red-color"
+                                  ></i>
+                                </p>
+                                <a
+                                  href="javascript:void()"
+                                  type="button"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#sender-orgin"
+                                  class="admin-btn-two rounded-0 shadow-none"
+                                  style="width: 35%"
+                                  ><i
+                                    class="fa-regular fa-window-restore pe-2"
+                                  ></i>
+                                  Address Book
+                                </a>
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <!-- Country Field -->
+                                  <div class="mb-2">
+                                    <label
+                                      for="validationCustom03"
+                                      class="form-label"
+                                      >Country</label
+                                    >
+                                    <select
+                                      class="form-select form-select-solid"
+                                      name=""
+                                      id="validationCustom04"
+                                      required
+                                    >
+                                      <option>Open this select menu</option>
+                                      <option value="united_state">
+                                        United State
+                                      </option>
+                                      <option value="bangladesh">
+                                        Bangladesh
+                                      </option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                      Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                      Please choose a username.
+                                    </div>
+                                  </div>
+                                  <!-- Country Field End-->
+                                </div>
+                                <div class="col-lg-6">
+                                  <!-- Country Field -->
+                                  <div class="mb-2">
+                                    <label
+                                      for="validationCustom03"
+                                      class="form-label"
+                                      >Zip Code</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control form-control-solid form-control-sm"
+                                      placeholder="Zip Code"
+                                      name="zip_code"
+                                      id="validationCustom01"
+                                      required
+                                    />
+                                    <div class="valid-feedback">
+                                      Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                      Please choose a username.
+                                    </div>
+                                  </div>
+                                  <!-- Country Field End-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="card rounded-0">
+                            <div class="card-header p-0">
+                              <div
+                                class="d-flex justify-content-between align-items-center"
+                              >
+                                <p class="m-0 ps-2 text-end">
+                                  RECEIVER
+                                  <i
+                                    class="fa-solid fa-arrow-right px-2 site-red-color"
+                                  ></i>
+                                </p>
+                                <a
+                                  href="javascript:void()"
+                                  type="button"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#receiver-orgin"
+                                  class="admin-btn-two rounded-0 shadow-none"
+                                  style="width: 35%"
+                                  ><i
+                                    class="fa-regular fa-window-restore pe-2"
+                                  ></i>
+                                  Address Book
+                                </a>
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col-lg-6">
+                                  <!-- Country Field -->
+                                  <div class="mb-2">
+                                    <label
+                                      for="validationCustom03"
+                                      class="form-label"
+                                      >Country</label
+                                    >
+                                    <select
+                                      class="form-select form-select-solid"
+                                      name=""
+                                      id="validationCustom04"
+                                      required
+                                    >
+                                      <option>Open this select menu</option>
+                                      <option value="united_state">
+                                        United State
+                                      </option>
+                                      <option value="bangladesh">
+                                        Bangladesh
+                                      </option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                      Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                      Please choose a username.
+                                    </div>
+                                  </div>
+                                  <!-- Country Field End-->
+                                </div>
+                                <div class="col-lg-6">
+                                  <!-- Country Field -->
+                                  <div class="mb-2">
+                                    <label
+                                      for="validationCustom03"
+                                      class="form-label"
+                                      >Zip Code</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control form-control-solid form-control-sm"
+                                      placeholder="Zip Code"
+                                      name="zip_code"
+                                      id="validationCustom01"
+                                      required
+                                    />
+                                    <div class="valid-feedback">
+                                      Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                      Please choose a username.
+                                    </div>
+                                  </div>
+                                  <!-- Country Field End-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="card p-0 mt-3">
+                            <div class="card-header p-0">
+                              <div
+                                class="d-flex justify-content-between align-items-center"
+                              >
+                                <p class="m-0 ps-2">
+                                  Shipment Measurements
+                                  <i
+                                    class="fa-solid fa-arrow-right px-2 site-red-color"
+                                  ></i>
+                                </p>
+                                <a
+                                  href="javascript:void()"
+                                  type="button"
+                                  class="admin-btn-one rounded-0 shadow-none"
+                                  style="width: 5%"
+                                  >LB/IN</a
+                                >
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <div class="row pt-4">
+                                <div class="col-lg-3">
+                                  <label
+                                    for="validationCustom03"
+                                    class="form-label"
+                                    >Weight
+                                    <span class="text-danger">*</span></label
+                                  >
+                                  <div class="input-group mb-3">
+                                    <input
+                                      type="text"
+                                      class="form-control form-control-sm"
+                                      placeholder="Weight"
+                                      aria-label="Weight"
+                                      aria-describedby="basic-addon2"
+                                      required
+                                    />
+                                    <span
+                                      class="input-group-text"
+                                      id="basic-addon2"
+                                      >lb</span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <label
+                                    for="validationCustom03"
+                                    class="form-label"
+                                    >Length
+                                    <span class="text-danger">*</span></label
+                                  >
+                                  <div class="input-group mb-3">
+                                    <input
+                                      type="text"
+                                      class="form-control form-control-sm"
+                                      placeholder="Length"
+                                      aria-label="Length"
+                                      aria-describedby="basic-addon2"
+                                      required
+                                    />
+                                    <span
+                                      class="input-group-text"
+                                      id="basic-addon2"
+                                      >in</span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <label
+                                    for="validationCustom03"
+                                    class="form-label"
+                                    >Width
+                                    <span class="text-danger">*</span></label
+                                  >
+                                  <div class="input-group mb-3">
+                                    <input
+                                      type="text"
+                                      class="form-control form-control-sm"
+                                      placeholder="Width"
+                                      aria-label="Width"
+                                      aria-describedby="basic-addon2"
+                                      required
+                                    />
+                                    <span
+                                      class="input-group-text"
+                                      id="basic-addon2"
+                                      >in</span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <label
+                                    for="validationCustom03"
+                                    class="form-label"
+                                    >Height
+                                    <span class="text-danger">*</span></label
+                                  >
+                                  <div class="input-group mb-3">
+                                    <input
+                                      type="text"
+                                      class="form-control form-control-sm"
+                                      placeholder="Height"
+                                      aria-label="Height"
+                                      aria-describedby="basic-addon2"
+                                      required
+                                    />
+                                    <span
+                                      class="input-group-text"
+                                      id="basic-addon2"
+                                      >in</span
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-6">
+                                  <label
+                                    for="validationCustom03"
+                                    class="form-label"
+                                    >Categories
+                                    <span class="text-danger">*</span></label
+                                  >
+                                  <div class="mb-3">
+                                    <select
+                                      class="js-example-basic-single form-select form-select-sm"
+                                      name="state"
+                                    >
+                                      <option>Select Category</option>
+                                      <option value="mobile_phones">Mobile Phones</option>
+                                      <option value="tablets">Tablets</option>
+                                      <option value="computers_laptops">Computers & Laptops</option>
+                                      <option value="cameras">Cameras</option>
+                                      <option value="fashion">Fashion</option>
+                                      <option value="watch">Watches</option>
+                                      <option value="toys">Toys</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 action-field">
+                                  <label
+                                    for="validationCustom03"
+                                    class="form-label"
+                                    >Insurance
+                                    <span class="text-danger">*</span></label
+                                  >
+                                  <div class="mb-3">
+                                    <div
+                                      class="form-check form-switch switch-box"
+                                    >
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        role="switch"
+                                        id="flexSwitchCheckDefault"
+                                      />
+                                      <label
+                                        class="form-check-label"
+                                        for="flexSwitchCheckDefault"
+                                        >Insurance</label
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="col-lg-4 show-field"
+                                  style="display: none"
+                                >
+                                  <label
+                                    for="validationCustom03"
+                                    class="form-label"
+                                    >Item value
+                                    <span class="text-danger">*</span></label
+                                  >
+                                  <div class="input-group mb-3">
+                                    <input
+                                      type="number"
+                                      class="form-control form-control-sm"
+                                      placeholder="Item value"
+                                      aria-label="Item value"
+                                      aria-describedby="basic-addon2"
+                                    />
+                                    <span
+                                      class="input-group-text"
+                                      id="basic-addon2"
+                                      >$</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 mt-3">
+                          <div class="d-flex justify-content-end">
+                            <button type="submit" class="admin-btn-two" style="width: 10%;">
+                              Submit
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card-body">
-                    <form
-                      action=""
-                      method="post"
-                      class="needs-validation"
-                      novalidate
-                    >
-                      <!-- SENDER Start -->
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <div class="">
-                            <p class="m-0 pe-4" style="border-bottom: 1px solid #eee;">
-                              SENDER <i class="fa-solid fa-arrow-right px-2"></i>
-                              <a
-                                href="javascript:void()"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#sender-orgin"
-                                class=""
-                                style="
-                                  background-color: #f5f3f3c4;
-                                  padding: 10px;
-                                  font-size: 12px;
-                                "
-                                >Address Book <i class="fa-regular fa-eye"></i
-                              ></a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row pt-4">
-                        <div class="col-lg-6">
-                          <!-- Country Field -->
-                          <div class="mb-2">
-                            <label for="validationCustom03" class="form-label"
-                              >Country</label
-                            >
-                            <select
-                              class="form-select form-select-solid"
-                              id="validationCustom04"
-                              required
-                            >
-                              <option>Open this select menu</option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                            </select>
-                            <div class="valid-feedback">Looks good!</div>
-                            <div class="invalid-feedback">
-                              Please choose a username.
-                            </div>
-                          </div>
-                          <!-- Country Field End-->
-                        </div>
-                        <div class="col-lg-6">
-                          <!-- Country Field -->
-                          <div class="mb-2">
-                            <label for="validationCustom03" class="form-label"
-                              >Zip Code</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control form-control-solid form-control-sm"
-                              placeholder="Zip Code"
-                              id="validationCustom01"
-                              required
-                            />
-                            <div class="valid-feedback">Looks good!</div>
-                            <div class="invalid-feedback">
-                              Please choose a username.
-                            </div>
-                          </div>
-                          <!-- Country Field End-->
-                        </div>
-                      </div>
-                      <!-- SENDER End -->
-                      <!-- RECEIVER Start -->
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <div class="">
-                            <p class="m-0 pe-4 text-end mt-4" style="border-bottom: 1px solid #eee;">
-                              <a
-                                href="javascript:void()"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#receiver-orgin"
-                                class=""
-                                style="
-                                  background-color: #f5f3f3c4;
-                                  padding: 10px;
-                                  font-size: 12px;
-                                "
-                                >Address Book <i class="fa-regular fa-eye"></i
-                              ></a> <i class="fa-solid fa-arrow-left px-2"></i> RECEIVER
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row pt-4">
-                        <div class="col-lg-6">
-                          <!-- Country Field -->
-                          <div class="mb-2">
-                            <label for="validationCustom03" class="form-label"
-                              >Country</label
-                            >
-                            <select
-                              class="form-select form-select-solid"
-                              id="validationCustom04"
-                              required
-                            >
-                              <option>Open this select menu</option>
-                              <option value="1">One</option>
-                              <option value="2">Two</option>
-                              <option value="3">Three</option>
-                            </select>
-                            <div class="valid-feedback">Looks good!</div>
-                            <div class="invalid-feedback">
-                              Please choose a username.
-                            </div>
-                          </div>
-                          <!-- Country Field End-->
-                        </div>
-                        <div class="col-lg-6">
-                          <!-- Country Field -->
-                          <div class="mb-2">
-                            <label for="validationCustom03" class="form-label"
-                              >Zip Code</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control form-control-solid form-control-sm"
-                              placeholder="Zip Code"
-                              id="validationCustom01"
-                              required
-                            />
-                            <div class="valid-feedback">Looks good!</div>
-                            <div class="invalid-feedback">
-                              Please choose a username.
-                            </div>
-                          </div>
-                          <!-- Country Field End-->
-                        </div>
-                      </div>
-                      <!-- RECEIVER End -->
-                      <!-- Shipment Measurements -->
-                      <div class="row pt-4">
-                        <p class="mx-3 ps-0" style="border-bottom: 1px solid #eee;">Shipment Measurements <i class="fa-solid fa-arrow-right px-2"></i> LB/IN </p>
-                        <div class="col-lg-3">
-                          <label for="validationCustom03" class="form-label"
-                            >Weight <span class="text-danger">*</span></label
-                          >
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control form-control-sm" placeholder="Weight" aria-label="Weight" aria-describedby="basic-addon2">
-                            <span class="input-group-text" id="basic-addon2">lb</span>
-                          </div>
-                        </div>
-                        <div class="col-lg-3">
-                          <label for="validationCustom03" class="form-label"
-                            >Length  <span class="text-danger">*</span></label
-                          >
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control form-control-sm" placeholder="Length" aria-label="Length" aria-describedby="basic-addon2">
-                            <span class="input-group-text" id="basic-addon2">in</span>
-                          </div>
-                        </div>
-                        <div class="col-lg-3">
-                          <label for="validationCustom03" class="form-label"
-                              >Width  <span class="text-danger">*</span></label
-                            >
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control form-control-sm" placeholder="Width" aria-label="Width" aria-describedby="basic-addon2">
-                            <span class="input-group-text" id="basic-addon2">in</span>
-                          </div>
-                        </div>
-                        <div class="col-lg-3">
-                          <label for="validationCustom03" class="form-label"
-                              >Height  <span class="text-danger">*</span></label
-                            >
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control form-control-sm" placeholder="Height" aria-label="Height" aria-describedby="basic-addon2">
-                            <span class="input-group-text" id="basic-addon2">in</span>
-                          </div>
-                        </div>
-                        <div class="col-lg-6">
-                          <label for="validationCustom03" class="form-label"
-                              >Categories   <span class="text-danger">*</span></label
-                            >
-                          <div class="mb-3">
-                            <select class="js-example-basic-single form-select form-select-sm" name="state">
-                              <option value="AL">Alabama</option>
-                              <option value="AL">Alabama</option>
-                              <option value="AL">Alabama</option>
-                               
-                              <option value="WY">Wyoming</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-lg-2 action-field">
-                          <label for="validationCustom03" class="form-label"
-                              >Insurance  <span class="text-danger">*</span></label
-                            >
-                          <div class="mb-3">
-                            <div class="form-check form-switch switch-box">
-                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                              <label class="form-check-label" for="flexSwitchCheckDefault">Insurance</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 show-field" style="display: none;">
-                          <label for="validationCustom03" class="form-label"
-                              >Item value  <span class="text-danger">*</span></label
-                            >
-                          <div class="input-group mb-3">
-                            <input type="number" class="form-control form-control-sm" placeholder="Item value" aria-label="Item value" aria-describedby="basic-addon2">
-                            <span class="input-group-text" id="basic-addon2">$</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <div class="d-flex justify-content-end ">
-                            <button type="submit" class="btn btn-base">Submit</button>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
         <!-- Page Content End-->
@@ -664,10 +826,10 @@
     <script>
       // jQuery code to toggle show-field based on switch-box state
       $(document).ready(function () {
-          $('#flexSwitchCheckDefault').change(function () {
-              $('.show-field').toggle(this.checked);
-          });
+        $("#flexSwitchCheckDefault").change(function () {
+          $(".show-field").toggle(this.checked);
+        });
       });
-  </script>
+    </script>
   </body>
 </html>

@@ -131,13 +131,15 @@
         </ul>
       </div>
       <div class="home-section">
-        <div class="bg-white d-flex justify-content-between align-items-center user_header">
+        <div
+          class="bg-white d-flex justify-content-between align-items-center user_header"
+        >
           <!-- Toggler Icon -->
           <div class="home-content">
             <i class="fa-solid fa-right-left bx-menu"></i>
           </div>
           <!-- Header Menu -->
-          <div>
+          <div class="header-menu-mobile">
             <a href="shop-form.html" class="me-3 header-nav-btn"
               ><i class="fa-solid fa-ship pe-1 icon-site-red"></i>SHOPPING</a
             >
@@ -160,19 +162,48 @@
           <!-- Profile -->
           <div>
             <div class="dropdown">
-              <a class="dropdown-toggle pe-2" type="button" data-bs-auto-close="outside" aria-expanded="false" data-bs-toggle="dropdown" >
+              <a
+                class="dropdown-toggle pe-2"
+                type="button"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+              >
                 <img
-                  class="rounded-circle p-0" width="50px"
+                  class="rounded-circle p-0"
+                  width="50px"
                   src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
                   alt="profileImg"
                 />
               </a>
               <ul class="dropdown-menu border-0 shadow-lg text-end">
-                <li><a class="dropdown-item" href="#">My Profile <i class="fa-regular fa-user ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shipping List<i class="fa-solid fa-list ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Time Table <i class="fa-solid fa-table-cells-large ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shiping Status <i class="fa-solid fa-signal ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Log Out <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i></a></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >My Profile <i class="fa-regular fa-user ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shipping List<i class="fa-solid fa-list ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Time Table
+                    <i class="fa-solid fa-table-cells-large ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shiping Status <i class="fa-solid fa-signal ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Log Out
+                    <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i
+                  ></a>
+                </li>
               </ul>
             </div>
           </div>
@@ -180,11 +211,15 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
-              <div class="text-center" style="padding-top: 30px;">
-                <h3>Your Parcel Status..</h3>
-                <p>This Is Your Dashboard Where You See All Of You Parcel History!</p>
+              <div class="text-center" style="padding-top: 30px">
+                <h3>Payment..</h3>
+                <p>
+                  This Is Your Dashboard Where You See All Of You Parcel
+                  History!
+                </p>
               </div>
             </div>
+            <div class="row"></div>
           </div>
         </div>
       </div>
@@ -219,6 +254,54 @@
       sidebarBtn.addEventListener("click", () => {
         sidebar.classList.toggle("close");
       });
+    </script>
+    <!-- For Multistep Form -->
+    <script>
+      var current = 0;
+      var tabs = $(".tab");
+      var tabs_pill = $(".tab-pills");
+
+      loadFormData(current);
+
+      function loadFormData(n) {
+        $(tabs_pill[n]).addClass("active");
+        $(tabs[n]).removeClass("d-none");
+        $("#back_button").attr("disabled", n == 0 ? true : false);
+        n == tabs.length - 1
+          ? $("#next_button")
+              .text("Submit")
+              .removeAttr("onclick")
+              .click(submitForm)
+          : $("#next_button")
+              .attr("type", "button")
+              .text("Next")
+              .attr("onclick", "next()");
+      }
+
+      function next() {
+        $(tabs[current]).addClass("d-none");
+        $(tabs_pill[current]).removeClass("active");
+
+        current++;
+        loadFormData(current);
+      }
+
+      function back() {
+        $(tabs[current]).addClass("d-none");
+        $(tabs_pill[current]).removeClass("active");
+
+        current--;
+        loadFormData(current);
+      }
+
+      function submitForm() {
+        // Assuming your form has an id "yourFormId"
+        // var formData = $("#yourFormId").serializeArray();
+        // console.log("Form Data:", formData);
+
+        // Assuming your form has an id "yourFormId"
+        $("#yourFormId").submit();
+      }
     </script>
   </body>
 </html>

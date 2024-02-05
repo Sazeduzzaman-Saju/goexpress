@@ -17,7 +17,10 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom_style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
@@ -137,7 +140,9 @@
       </div>
       <div class="home-section">
         <!-- Header Start -->
-        <div class="bg-white d-flex justify-content-between align-items-center user_header">
+        <div
+          class="bg-white d-flex justify-content-between align-items-center user_header"
+        >
           <!-- Toggler Icon -->
           <div class="home-content">
             <i class="fa-solid fa-right-left bx-menu"></i>
@@ -166,41 +171,75 @@
           <!-- Profile -->
           <div>
             <div class="dropdown">
-              <a class="dropdown-toggle pe-2" type="button" data-bs-auto-close="outside" aria-expanded="false" data-bs-toggle="dropdown" >
+              <a
+                class="dropdown-toggle pe-2"
+                type="button"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+              >
                 <img
-                  class="rounded-circle p-0" width="50px"
+                  class="rounded-circle p-0"
+                  width="50px"
                   src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
                   alt="profileImg"
                 />
               </a>
               <ul class="dropdown-menu border-0 shadow-lg text-end">
-                <li><a class="dropdown-item" href="#">My Profile <i class="fa-regular fa-user ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shipping List<i class="fa-solid fa-list ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Time Table <i class="fa-solid fa-table-cells-large ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shiping Status <i class="fa-solid fa-signal ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Log Out <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i></a></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >My Profile <i class="fa-regular fa-user ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shipping List<i class="fa-solid fa-list ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Time Table
+                    <i class="fa-solid fa-table-cells-large ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shiping Status <i class="fa-solid fa-signal ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Log Out
+                    <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i
+                  ></a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-         <!-- Header End -->
-        <div class="container">
-          <div class="row">
+        <!-- Header End -->
+        <div class="container-fluid ">
+          <div class="row mt-3">
             <div class="col-lg-12">
-              <div class="text-center" style="padding-top: 30px;">
-                <h3>Due Invoiced</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
+              <nav class="breadcrumb mb-0">
+                <a class="breadcrumb-item" href="user-dashboard.html"
+                  >Dashboard</a
+                >
+                <span class="breadcrumb-item active" aria-current="page"
+                  >Due Invoice</span
+                >
+              </nav>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-12">
               <div class="card">
-                <div class="card-header">
-                  <div class="d-flex justify-content-between align-items-center ">
-                    <h6>Due Invoiced</h6>
+                <div class="card-header p-0">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="ps-2 p-0 m-0">Due Invoiced</h6>
                     <div>
-                      <a href="paid-invoice.html" class="btn btn-base">Paid Invoice List
+                      <a href="paid-invoice.html" class="admin-btn-two"
+                        >Paid Invoice List
                       </a>
                     </div>
                   </div>
@@ -210,17 +249,17 @@
                     <table class="display tables" style="width: 100%">
                       <thead>
                         <tr>
-                          <th class="text-center ">INVOICE NO:</th>
-                          <th class="text-center ">ITEM DETAILS</th>
-                          <th class="text-center ">DUE AMOUNT</th>
-                          <th class="text-center ">PAID AMOUNT</th>
-                          <th class="text-center ">TOTAL AMOUNT</th>
-                          <th class="text-center ">INVOICE TYPE</th>
-                          <th class="text-center ">STATUS</th>
-                          <th class="text-center ">ACTION</th>
+                          <th class="text-center">INVOICE NO:</th>
+                          <th class="text-center">ITEM DETAILS</th>
+                          <th class="text-center">DUE AMOUNT</th>
+                          <th class="text-center">PAID AMOUNT</th>
+                          <th class="text-center">TOTAL AMOUNT</th>
+                          <th class="text-center">INVOICE TYPE</th>
+                          <th class="text-center">STATUS</th>
+                          <th class="text-end ">ACTION</th>
                         </tr>
                       </thead>
-                      <tbody class="text-center ">
+                      <tbody class="text-center">
                         <tr>
                           <td>1</td>
                           <td>Total 4 items</td>
@@ -229,10 +268,18 @@
                           <td>৳10494</td>
                           <td>Shipping</td>
                           <td><span class="badge bg-primary">Paid</span></td>
-                          <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                              <a type="button" class="admin-btn-one rounded-0">Details</a>
-                              <a type="button" class="admin-btn-two rounded-0">Paid</a>
+                          <td class="text-end ">
+                            <div
+                              class="btn-group"
+                              role="group"
+                              aria-label="Basic example"
+                            >
+                              <a href="order-details.html" class="admin-btn-one rounded-0"
+                                >Details</a
+                              >
+                              <a href="tracked-parcel.html" class="admin-btn-two rounded-0"
+                                >Paid</a
+                              >
                             </div>
                           </td>
                         </tr>
@@ -244,10 +291,18 @@
                           <td>৳10494</td>
                           <td>Shipping</td>
                           <td><span class="badge bg-primary">Paid</span></td>
-                          <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                              <a type="button" class="admin-btn-one rounded-0">Details</a>
-                              <a type="button" class="admin-btn-two rounded-0">Paid</a>
+                          <td class="text-end ">
+                            <div
+                              class="btn-group"
+                              role="group"
+                              aria-label="Basic example"
+                            >
+                              <a type="button" href="order-details.html" class="admin-btn-one rounded-0"
+                                >Details</a
+                              >
+                              <a type="button" class="admin-btn-two rounded-0"
+                                >Paid</a
+                              >
                             </div>
                           </td>
                         </tr>
@@ -270,13 +325,13 @@
 
     <!-- all plugins here -->
     <script
-    src="https://kit.fontawesome.com/69b7156a94.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="assets/js/vendor.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+      src="https://kit.fontawesome.com/69b7156a94.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
     <script>

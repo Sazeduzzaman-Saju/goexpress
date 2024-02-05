@@ -17,14 +17,6 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom_style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
-    />
   </head>
   <body>
     <!-- preloader area start -->
@@ -72,7 +64,6 @@
               <i class="fa-solid fa-chevron-down arrow"></i>
             </div>
             <ul class="sub-menu">
-              <li><a href="shipment-anywhere.html">Shipment Anywhere</a></li>
               <li><a href="create-shipment.html">Create Shipment</a></li>
               <li><a href="shipment-list.html">Shipment List</a></li>
               <li><a href="pickup.html">Pickup</a></li>
@@ -102,7 +93,7 @@
               <i class="fa-solid fa-chevron-down arrow"></i>
             </div>
             <ul class="sub-menu">
-              <li><a href="#">Create Booking</a></li>
+              <li><a href="create-booking.html">Create Booking</a></li>
               <li><a href="booking-list.html">Booking List</a></li>
             </ul>
           </li>
@@ -119,21 +110,6 @@
               <li><a href="ongoing-order.html">Ongoing Orders</a></li>
               <li><a href="delivered-order.html">Delivered Orders</a></li>
               <li><a href="cancelled-orders.html">Cancelled Orders</a></li>
-            </ul>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <i class="fa-solid fa-house"></i>
-                <span class="link_name">Accesories</span>
-              </a>
-              <i class="fa-solid fa-chevron-down arrow"></i>
-            </div>
-            <ul class="sub-menu">
-              <li><a href="#">Payment Due</a></li>
-              <li><a href="#">Ongoing Orders</a></li>
-              <li><a href="#">Delivered Orders</a></li>
-              <li><a href="#">Cancelled Orders</a></li>
             </ul>
           </li>
           <li>
@@ -155,7 +131,6 @@
         </ul>
       </div>
       <div class="home-section">
-        <!-- Header Start -->
         <div
           class="bg-white d-flex justify-content-between align-items-center user_header"
         >
@@ -164,7 +139,7 @@
             <i class="fa-solid fa-right-left bx-menu"></i>
           </div>
           <!-- Header Menu -->
-          <div>
+          <div class="header-menu-mobile">
             <a href="shop-form.html" class="me-3 header-nav-btn"
               ><i class="fa-solid fa-ship pe-1 icon-site-red"></i>SHOPPING</a
             >
@@ -233,81 +208,76 @@
             </div>
           </div>
         </div>
-        <!-- Header End -->
         <div class="container-fluid">
           <div class="row mt-3">
             <div class="col-lg-12">
               <nav class="breadcrumb mb-0">
-                <a class="breadcrumb-item" href="user-dashboard.html"
-                  >Dashboard</a
-                >
-                <span class="breadcrumb-item active" aria-current="page"
-                  >Shipment List</span
-                >
+                <a class="breadcrumb-item" href="user-dashboard.html">Dashboard</a>
+                <a class="breadcrumb-item" href="ongoing-order.html">Back To Order List</a>
+                <span class="breadcrumb-item active" aria-current="page">Order Details</span>
               </nav>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-center" style="padding-top: 30px">
-                <h3>Comming Soon</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="card">
-                <div class="card-header">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <h6>Shipment List</h6>
-                    <div>
-                      <button type="submit" class="btn btn-base">
-                        <i class="fa fa-plus"></i> Create New List
-                      </button>
+          <div class="card my-3">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div>
+                    <img class="img-fluid " src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                  </div>
+                  <div class="table-responsive mt-4">
+                    <div class="table-responsive">
+                      <table class="table table-bordered mb-0 text-center">
+                        <thead>
+                          <tr>
+                            <th scope="col">Color</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Quantity</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="">
+                            <td scope="row">Red</td>
+                            <td>15.5mm</td>
+                            <td>2</td>
+                          </tr>
+                          <tr class="">
+                            <td scope="row">Item</td>
+                            <td>Item</td>
+                            <td>Item</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="pt-4 d-flex justify-content-between ">
+                        <a href="payment.html" class="admin-btn-one me-2"><i class="fa-solid fa-sack-dollar pe-2"></i> Due Ammount Pay Now</a>
+                        <a href="create-booking.html" class="admin-btn-two"><i class="fa-regular fa-pen-to-square pe-2"></i> Edit Order</a>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="display tables" style="width: 100%">
-                      <thead>
-                        <tr>
-                          <th>TRACKING</th>
-                          <th>COURIER</th>
-                          <th>NUMBER</th>
-                          <th>RECEIVER</th>
-                          <th>PRICE</th>
-                          <th>CREATED DATE</th>
-                          <th>STATUS</th>
-                          <th>ACTION</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td>$85,675</td>
-                        </tr>
-                        <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td>$85,675</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                <div class="col-lg-8">
+                  <div>
+                    <h4>Men White Expensive Digital Watch </h4>
+                    <p class="badge bg-danger p-2">Order Number : <span class="fw-bold ">65b107a5eb1cd</span></p>
+                    <p class="badge bg-danger p-2">From  : <span class="fw-bold ">USA</span> TO <span class="fw-bold ">Bangladesh</span></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ea itaque deleniti necessitatibus, pariatur repellendus magni eligendi culpa, repudiandae fugiat illo quasi quis! Voluptatem hic quasi earum minima nihil architecto nobis sed iusto excepturi quam. Eum tempora nihil, reprehenderit soluta voluptates quaerat, a accusamus eaque cumque quibusdam veniam animi ea repellendus qui praesentium veritatis mollitia repudiandae cum facilis? Optio facilis fugiat quia ea quis quod exercitationem, consectetur inventore. Magni, deserunt. Vitae nihil labore ratione, repellat numquam maxime commodi ad qui mollitia quasi vero adipisci minima placeat atque aliquam cupiditate expedita at assumenda incidunt explicabo quod neque tempora iure obcaecati. Reiciendis.</p>
+                    <h6 class="fw-bold ">Order Details:</h6>
+                    <ul style="list-style: circle;">
+                      <li>Total Quantity : <span class="site-red-color">1</span></li>
+                      <li>Conversation Rate : <span class="site-red-color">1$ = 120 TK</span></li>
+                      <li>Product Cost : <span class="site-red-color">3360Tk</span> In <span class="site-red-color">[28$]</span></li>
+                      <li>USA Tax : <span class="site-red-color">302.4 Tk</span> In <span class="site-red-color">[9% of Product Cost]</span></li>
+                      <li>Suppliers Courier Cost : <span class="site-red-color">838.80 Tk</span></li>
+                      <li>Go Express Processing Fee : <span class="site-red-color">336 Tk</span></li>
+                      <li>Total Item Price : <span class="site-red-color fw-bold ">4,837.20 to be Pay Now.</span></li>
+                    </ul>
+                    <div>
+                      <h6>Shipment Charge : <span class="site-red-color">1650TK Per/KG</span></h6>
+                      <h6>Bd Airport Brokerage Fee : <span class="site-red-color"> 1650TK Per/KG</span></h6>
+                      <div>
+                        <p class="text-danger "><strong>NB:</strong> Minimum Weight Charge 600 TK Applicable.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -330,8 +300,6 @@
     ></script>
     <script src="assets/js/vendor.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
     <script>
@@ -348,6 +316,54 @@
       sidebarBtn.addEventListener("click", () => {
         sidebar.classList.toggle("close");
       });
+    </script>
+    <!-- For Multistep Form -->
+    <script>
+      var current = 0;
+      var tabs = $(".tab");
+      var tabs_pill = $(".tab-pills");
+
+      loadFormData(current);
+
+      function loadFormData(n) {
+        $(tabs_pill[n]).addClass("active");
+        $(tabs[n]).removeClass("d-none");
+        $("#back_button").attr("disabled", n == 0 ? true : false);
+        n == tabs.length - 1
+          ? $("#next_button")
+              .text("Submit")
+              .removeAttr("onclick")
+              .click(submitForm)
+          : $("#next_button")
+              .attr("type", "button")
+              .text("Next")
+              .attr("onclick", "next()");
+      }
+
+      function next() {
+        $(tabs[current]).addClass("d-none");
+        $(tabs_pill[current]).removeClass("active");
+
+        current++;
+        loadFormData(current);
+      }
+
+      function back() {
+        $(tabs[current]).addClass("d-none");
+        $(tabs_pill[current]).removeClass("active");
+
+        current--;
+        loadFormData(current);
+      }
+
+      function submitForm() {
+        // Assuming your form has an id "yourFormId"
+        // var formData = $("#yourFormId").serializeArray();
+        // console.log("Form Data:", formData);
+
+        // Assuming your form has an id "yourFormId"
+        $("#yourFormId").submit();
+      }
     </script>
   </body>
 </html>

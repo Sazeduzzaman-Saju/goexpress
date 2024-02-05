@@ -17,7 +17,10 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom_style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
@@ -137,7 +140,9 @@
       </div>
       <div class="home-section">
         <!-- Header Start -->
-        <div class="bg-white d-flex justify-content-between align-items-center user_header">
+        <div
+          class="bg-white d-flex justify-content-between align-items-center user_header"
+        >
           <!-- Toggler Icon -->
           <div class="home-content">
             <i class="fa-solid fa-right-left bx-menu"></i>
@@ -166,79 +171,172 @@
           <!-- Profile -->
           <div>
             <div class="dropdown">
-              <a class="dropdown-toggle pe-2" type="button" data-bs-auto-close="outside" aria-expanded="false" data-bs-toggle="dropdown" >
+              <a
+                class="dropdown-toggle pe-2"
+                type="button"
+                data-bs-auto-close="outside"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+              >
                 <img
-                  class="rounded-circle p-0" width="50px"
+                  class="rounded-circle p-0"
+                  width="50px"
                   src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
                   alt="profileImg"
                 />
               </a>
               <ul class="dropdown-menu border-0 shadow-lg text-end">
-                <li><a class="dropdown-item" href="#">My Profile <i class="fa-regular fa-user ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shipping List<i class="fa-solid fa-list ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Time Table <i class="fa-solid fa-table-cells-large ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shiping Status <i class="fa-solid fa-signal ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Log Out <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i></a></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >My Profile <i class="fa-regular fa-user ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shipping List<i class="fa-solid fa-list ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Time Table
+                    <i class="fa-solid fa-table-cells-large ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Shiping Status <i class="fa-solid fa-signal ps-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Log Out
+                    <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i
+                  ></a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-         <!-- Header End -->
-        <div class="container">
-          <div class="row">
+        <!-- Header End -->
+        <div class="container-fluid">
+          <div class="row mt-3">
             <div class="col-lg-12">
-              <div class="text-center" style="padding-top: 30px;">
-                <h3>Ongoing Order</h3>
-                <p>All Ongoing Order Are Here ! Please Check.</p>
-              </div>
+              <nav class="breadcrumb mb-0">
+                <a class="breadcrumb-item" href="user-dashboard.html"
+                  >Dashboard</a
+                >
+                <span class="breadcrumb-item active" aria-current="page"
+                  >Ongoing Order</span
+                >
+              </nav>
             </div>
           </div>
-          <div class="row">
+          <div class="row mt-4">
             <div class="col-lg-12">
               <div class="card">
-                <div class="card-header bg-white">
-                  <h6 class="m-0">Ongoing Order</h6>
+                <div
+                  class="card-header bg-white border-0 d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <h5 class="p-0 m-0">Ongoing Order</h5>
+                    <p class="p-0 m-0">
+                      All Ongoing Order Are Here ! Please Check.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-end align-items-center">
+                    <a class="admin-btn-one" href="create-booking.html"
+                      ><i class="fa-solid fa-plus pe-2"></i> Create New
+                      Booking</a
+                    >
+                  </div>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="display tables" style="width: 100%">
                       <thead>
                         <tr>
-                          <th class="text-center ">PRODUCT NAME</th>
-                          <th class="text-center ">ORDER ID</th>
-                          <th class="text-center ">AMOUNT</th>
-                          <th class="text-center ">SHIPPING FROM</th>
-                          <th class="text-center ">TRACKING NUMBER</th>
-                          <th class="text-center ">STATUS</th>
-                          <th class="text-center ">ACTION</th>
+                          <th class="text-start">PRODUCT NAME</th>
+                          <th class="text-center">ORDER ID</th>
+                          <th class="text-center">AMOUNT</th>
+                          <th class="text-center">SHIPPING FROM</th>
+                          <th class="text-center">TRACKING NUMBER</th>
+                          <th class="text-center">STATUS</th>
+                          <th class="text-end">ACTION</th>
                         </tr>
                       </thead>
-                      <tbody class="text-center ">
+                      <tbody class="text-center">
                         <tr>
-                          <td>Unity Butler</td>
+                          <td class="text-start">Unity Butler</td>
                           <td>65b107a5eb1cd</td>
                           <td>৳0.00</td>
                           <td>USA - Bangladesh</td>
                           <td>2USBD65b073f6a2659</td>
-                          <td><span class="badge bg-primary">Pending</span></td>
                           <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                              <a type="button" class="admin-btn-one rounded-0">View</a>
-                              <a type="button" class="admin-btn-two rounded-0">Track</a>
+                            <span class="badge bg-primary p-2"
+                              >This Parcel Is Delivery To The Warehouse</span
+                            >
+                          </td>
+                          <td class="text-end">
+                            <div
+                              class="btn-group"
+                              role="group"
+                              aria-label="Basic example"
+                            >
+                              <a
+                                type="button"
+                                href="order-details.html"
+                                class="admin-btn-one rounded-0"
+                                >View</a
+                              >
+                              <a
+                                type="button"
+                                href="track-order.html"
+                                class="admin-btn-two rounded-0"
+                                >Track</a
+                              >
+                              <button
+                                type="button"
+                                class="admin-btn-one rounded-0"
+                                disabled
+                              >
+                                Pay
+                              </button>
                             </div>
                           </td>
                         </tr>
                         <tr>
-                          <td>Unity Butler</td>
+                          <td class="text-start">Unity Butler</td>
                           <td>65b107a5eb1cd</td>
                           <td>৳0.00</td>
                           <td>USA - Bangladesh</td>
                           <td>2USBD65b073f6a2659</td>
-                          <td><span class="badge bg-success ">Verified</span></td>
                           <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                              <a type="button" class="admin-btn-one rounded-0">View</a>
-                              <a type="button" class="admin-btn-two rounded-0">Track</a>
+                            <span class="badge bg-info p-2">Payment Due</span>
+                          </td>
+                          <td class="text-end">
+                            <div
+                              class="btn-group"
+                              role="group"
+                              aria-label="Basic example"
+                            >
+                              <a
+                                type="button"
+                                href="order-details.html"
+                                class="admin-btn-one rounded-0"
+                                >View</a
+                              >
+                              <a
+                                type="button"
+                                href="track-order.html"
+                                class="admin-btn-two rounded-0"
+                                >Track</a
+                              >
+                              <a
+                                type="button"
+                                href="payment.html"
+                                class="admin-btn-one rounded-0"
+                                >Pay</a
+                              >
                             </div>
                           </td>
                         </tr>
@@ -261,13 +359,13 @@
 
     <!-- all plugins here -->
     <script
-    src="https://kit.fontawesome.com/69b7156a94.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="assets/js/vendor.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+      src="https://kit.fontawesome.com/69b7156a94.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
     <script>

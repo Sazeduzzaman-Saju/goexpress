@@ -274,6 +274,18 @@
         </div>
         <!-- Header End -->
         <div class="container-fluid">
+          <div class="row mt-3">
+            <div class="col-lg-12">
+              <nav class="breadcrumb mb-0">
+                <a class="breadcrumb-item" href="user-dashboard.html"
+                  >Dashboard</a
+                >
+                <span class="breadcrumb-item active" aria-current="page"
+                  >Shop Form</span
+                >
+              </nav>
+            </div>
+          </div>
           <div class="row">
             <div class="col-lg-12">
               <div class="text-center" style="padding-top: 30px">
@@ -293,7 +305,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-8 col-offset-2 mx-auto">
+            <div class="col-lg-12 mx-auto">
               <form action="" class="my-4">
                 <div class="row repeater-default">
                   <div data-repeater-list="" class="">
@@ -343,9 +355,12 @@
                                     name="from_country"
                                   >
                                     <option selected>From Country</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="mobile_phones">
+                                      Bangladesh
+                                    </option>
+                                    <option value="tablets">
+                                      United State
+                                    </option>
                                   </select>
                                 </div>
                                 <div class="col-lg-4">
@@ -354,23 +369,24 @@
                                     name="to_country"
                                   >
                                     <option selected>To Coountry</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="mobile_phones">
+                                      Andora
+                                    </option>
+                                    <option value="tablets">Afganistan</option>
+                                    <option value="computers_laptops"></option>
+                                    <option value="cameras">Russia</option>
+                                    <option value="fashion">Ukrain</option>
+                                    <option value="watch">Watches</option>
+                                    <option value="toys">Toys</option>
                                   </select>
                                 </div>
                                 <div class="col-lg-4">
-                                  <select
-                                    class="form-select form-select-solid"
-                                    name="cupon"
-                                  >
-                                    <option selected>
-                                      Coupon, Discount Code If Any
-                                    </option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                  </select>
+                                  <input
+                                    type="email"
+                                    class="form-control form-control-sm form-control-solid"
+                                    name="email"
+                                    placeholder="coupon"
+                                  />
                                 </div>
                                 <div class="col-lg-6">
                                   <div class="my-3">
@@ -378,7 +394,7 @@
                                       type="email"
                                       class="form-control form-control-sm form-control-solid"
                                       name="email"
-                                      placeholder="name@example.com"
+                                      placeholder="Email"
                                     />
                                   </div>
                                 </div>
@@ -399,9 +415,17 @@
                                       name="category"
                                     >
                                       <option selected>Select Category</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
+                                      <option value="mobile_phones">
+                                        Mobile Phones
+                                      </option>
+                                      <option value="tablets">Tablets</option>
+                                      <option value="computers_laptops">
+                                        Computers & Laptops
+                                      </option>
+                                      <option value="cameras">Cameras</option>
+                                      <option value="fashion">Fashion</option>
+                                      <option value="watch">Watches</option>
+                                      <option value="toys">Toys</option>
                                     </select>
                                   </div>
                                 </div>
@@ -551,79 +575,6 @@
         sidebar.classList.toggle("close");
       });
     </script>
-    <!-- Form Repeater -->
-    <script>
-      $(document).ready(function () {
-        // Initialize the first repeater item
-        $(".drag").repeater({
-          initval: 1,
-          show: function () {
-            // Initialize accordion for the new item
-            initializeAccordion(this);
-          },
-        });
-
-        // Function to add a new form repeater item with a transition
-        function addRepeaterItem() {
-          var newItem = $(".repeater-default:first").clone();
-          newItem.find("input, select").val(""); // Clear input values
-          newItem.hide().insertAfter(".repeater-default:last"); // Insert after the last repeater item
-          newItem.repeater({ show: initializeAccordion }); // Initialize as a repeater item with show option
-          newItem.slideDown(400); // Add slideDown animation
-        }
-
-        // Initialize the sortable feature for dragging
-        $(".drag")
-          .sortable({
-            axis: "y",
-            cursor: "pointer",
-            opacity: 0.5,
-            placeholder: "row-dragging",
-            delay: 150,
-            update: function (event, ui) {
-              console.log("repeaterVal");
-              console.log($(".drag").repeaterVal());
-              console.log("serializeArray");
-              console.log($("form").serializeArray());
-            },
-          })
-          .disableSelection();
-
-        // Handle the click event to add a new form repeater item
-        $(".repeat-add").on("click", function () {
-          addRepeaterItem();
-        });
-
-        // Handle the form submission
-        $("form").on("submit", function (event) {
-          event.preventDefault();
-          console.log("Form submitted");
-          // Additional logic for form submission if needed
-        });
-
-        function initializeAccordion(element) {
-          $(element)
-            .find(".accordion")
-            .each(function (index) {
-              const uniqueID = `accordionItem${new Date().getTime() + index}`;
-              $(this)
-                .find(".accordion-button")
-                .attr("data-bs-target", `.${uniqueID}`);
-              $(this).find(".accordion-collapse").attr("id", uniqueID);
-            });
-
-          // Initialize accordion events for the new item
-          $(element)
-            .find(".accordion")
-            .on("show.bs.collapse", function () {
-              $(this).find(".accordion-button").removeClass("collapsed");
-            })
-            .on("hide.bs.collapse", function () {
-              $(this).find(".accordion-button").addClass("collapsed");
-            });
-        }
-      });
-    </script>
     <!-- For incress & Dicress -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -666,20 +617,6 @@
         });
       });
     </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const repeaterItems = document.querySelectorAll(".form-reater-items");
-
-        repeaterItems.forEach((item, index) => {
-          const accordionButton = item.querySelector(".accordion-button");
-          const accordionCollapse = item.querySelector(".accordion-collapse");
-
-          // Generate unique IDs
-          const uniqueID = `accordionItem${index}`;
-          accordionButton.setAttribute("data-bs-target", `#${uniqueID}`);
-          accordionCollapse.setAttribute("id", uniqueID);
-        });
-      });
-    </script>
+    <script></script>
   </body>
 </html>
