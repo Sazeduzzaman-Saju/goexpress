@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="assets/css/vendor.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css"
+    />
     <style>
       .nav-tabs .nav-link-login {
         margin-bottom: -1px;
@@ -109,7 +113,7 @@
           <div class="col-lg-6">
             <div class="row ms-5">
               <div
-                class="col-lg-8 col-offset-2 me-auto "
+                class="col-lg-8 col-offset-2 me-auto"
                 style="
                   height: 100vh;
                   display: flex;
@@ -121,11 +125,15 @@
                   <div class="col-lg-12">
                     <h3 class="mb-3 text-center">Sign In With</h3>
                   </div>
-                  <div class="col-lg-12 mb-5 text-center ">
+                  <div class="col-lg-12 mb-5 text-center">
                     <div>
                       <p>--Or Login With--</p>
                     </div>
-                    <ul class="nav nav-tabs border-0 d-flex justify-content-center " id="myTab" role="tablist">
+                    <ul
+                      class="nav nav-tabs border-0 d-flex justify-content-center"
+                      id="myTab"
+                      role="tablist"
+                    >
                       <li class="nav-item" role="presentation">
                         <button
                           class="nav-link active nav-link-login"
@@ -136,7 +144,10 @@
                           role="tab"
                           aria-controls="otp-tabs"
                           aria-selected="true"
-                          style="border-top-left-radius: 30px;border-bottom-left-radius: 30px;"
+                          style="
+                            border-top-left-radius: 30px;
+                            border-bottom-left-radius: 30px;
+                          "
                         >
                           <i class="fa-solid fa-comment-sms"></i> OTP
                         </button>
@@ -156,10 +167,7 @@
                         </button>
                       </li>
                       <li class="nav-item" role="presentation">
-                        <button
-                          class="nav-link nav-link-login"
-                          type="button"
-                        >
+                        <button class="nav-link nav-link-login" type="button">
                           <i class="fa-brands fa-google"></i> Google
                         </button>
                       </li>
@@ -167,7 +175,10 @@
                         <button
                           class="nav-link nav-link-login"
                           type="button"
-                          style="border-top-right-radius: 30px;border-bottom-right-radius: 30px;"
+                          style="
+                            border-top-right-radius: 30px;
+                            border-bottom-right-radius: 30px;
+                          "
                         >
                           <i class="fa-brands fa-facebook-f"></i> Facebook
                         </button>
@@ -184,20 +195,26 @@
                         tabindex="0"
                       >
                         <form action="">
-                          <div class="input-group mb-3">
-                            <button class="dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li>
-                              <li><hr class="dropdown-divider"></li>
-                              <li><a class="dropdown-item" href="#">Separated link</a></li>
-                            </ul>
-                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                          <div class="mb-3">
+                            <input
+                              type="text"
+                              id="mobile_code"
+                              class="js-states form-control"
+                              placeholder="Phone Number"
+                              name="name"
+                              style="width: 36rem !important"
+                            />
                           </div>
                           <div class="mb-5">
-                            <button type="submit" class="login-user-btn mb-2">Send OTP</button>
-                            <a href="user-dashboard.html" class="text-primary">Resend OTP</a>
+                            <button type="submit" class="login-user-btn mb-2">
+                              Send OTP
+                            </button>
+                            <div class="d-flex justify-content-between">
+                              <a href="" class="text-primary">Resend OTP</a>
+                              <a href="user-dashboard.html" class="text-primary"
+                                >User Dashboard</a
+                              >
+                            </div>
                           </div>
                         </form>
                       </div>
@@ -208,50 +225,64 @@
                         aria-labelledby="email-tabs"
                         tabindex="0"
                       >
-                      <form class="w-100">
-                        <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label"
-                            >Email address</label
-                          >
-                          <input
-                            type="email"
-                            class="form-control w-100"
-                            id="exampleInputEmail1"
-                            aria-describedby="emailHelp"
-                          />
-                          <div id="emailHelp" class="form-text">
-                            We'll never share your email with anyone else.
-                          </div>
-                        </div>
-                        <div class="mb-3">
-                          <label
-                            for="exampleInputPassword1"
-                            class="form-label"
-                            >Password</label
-                          >
-                          <input
-                            type="password"
-                            class="form-control w-100"
-                            id="exampleInputPassword1"
-                          />
-                        </div>
-                        <div class="mb-3 form-check">
-                          <input
-                            type="checkbox"
-                            class="form-check-input"
-                            id="exampleCheck1"
-                          />
-                          <label class="form-check-label" for="exampleCheck1" style="width: 100%;">
-                            <div class="d-flex justify-content-between  align-items-center ">
-                              <p>Remember Me</p>
-                              <p><a href="">Forgot Password?</a></p>
+                        <form class="w-100">
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label"
+                              >Email address</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control w-100"
+                              id="exampleInputEmail1"
+                              aria-describedby="emailHelp"
+                            />
+                            <div id="emailHelp" class="form-text">
+                              We'll never share your email with anyone else.
                             </div>
-                          </label>
-                        </div>
-                        <button type="submit" class="login-user-btn mb-2">
-                          Submit
-                        </button>
-                      </form>
+                          </div>
+                          <div class="mb-3">
+                            <label
+                              for="exampleInputPassword1"
+                              class="form-label"
+                              >Password</label
+                            >
+                            <input
+                              type="password"
+                              class="form-control w-100"
+                              id="exampleInputPassword1"
+                            />
+                          </div>
+                          <div class="mb-3 form-check">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              id="exampleCheck1"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="exampleCheck1"
+                              style="width: 100%"
+                            >
+                              <div
+                                class="d-flex justify-content-between align-items-center"
+                              >
+                                <p>Remember Me</p>
+                                <p><a href="">Forgot Password?</a></p>
+                              </div>
+                            </label>
+                          </div>
+                          <button type="submit" class="login-user-btn mb-2">
+                            Submit
+                          </button>
+                          <div class="text-center pt-3">
+                            <p>
+                              New here?
+                              <a href="register.html" class="text-primary"
+                                >Create an account</a
+                              >
+                            </p>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -272,6 +303,9 @@
     <!-- all plugins here -->
     <script src="assets/js/vendor.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/linuxguist/countries@main/script.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
     <script

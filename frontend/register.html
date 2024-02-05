@@ -15,13 +15,29 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/vendor.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/custom_style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css"
-    />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css'>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .nav-tabs .nav-link-login {
+        margin-bottom: -1px;
+        background: 0 0;
+        border: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-right: 5px;
+        background: #fdd504;
+        color: black;
+        border-radius: 5px;
+        height: 43px;
+      }
+      .nav-tabs .nav-item.show .nav-link-login,
+      .nav-tabs .nav-link-login.active {
+        color: #fefefe;
+        background-color: #ec1c24;
+        border-color: #dee2e6 #dee2e6 #fff;
+      }
+    </style>
   </head>
   <body>
     <!-- preloader area start -->
@@ -48,215 +64,200 @@
       </form>
     </div>
     <!-- search popup end-->
-    <main>
-      <div class="sidebar">
-        <div class="logo-details">
-          <img src="https://i.ibb.co/x27VjRM/Go-Express-LOGO.png" alt="" />
-        </div>
-        <ul class="nav-links">
-          <li class="active">
-            <a href="user-dashboard.html">
-              <i class="fa-solid fa-house"></i>
-              <span class="link_name">Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <i class="fa-solid fa-globe"></i>
-                <span class="link_name">Ship Anywhere</span>
-              </a>
-              <i class="fa-solid fa-chevron-down arrow"></i>
-            </div>
-            <ul class="sub-menu">
-              <li><a href="shipment-anywhere.html">Shipment Anywhere</a></li>
-              <li><a href="create-shipment.html">Create Shipment</a></li>
-              <li><a href="shipment-list.html">Shipment List</a></li>
-              <li><a href="pickup.html">Pickup</a></li>
-            </ul>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <i class="fa-solid fa-ship"></i>
-                <span class="link_name">Shipping Supply</span>
-              </a>
-              <i class="fa-solid fa-chevron-down arrow"></i>
-            </div>
-            <ul class="sub-menu">
-              <li><a href="#">USPS - Free of Cost.</a></li>
-              <li><a href="#">USPS - Free of Cost.</a></li>
-              <li><a href="#">FedEx - Free of Cost.</a></li>
-              <li><a href="#">DHL - Free of Cost.</a></li>
-            </ul>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <i class="fa-solid fa-clipboard-check"></i>
-                <span class="link_name">Booking Parcel</span>
-              </a>
-              <i class="fa-solid fa-chevron-down arrow"></i>
-            </div>
-            <ul class="sub-menu">
-              <li><a href="#">Create Booking</a></li>
-              <li><a href="booking-list.html">Booking List</a></li>
-            </ul>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-                <span class="link_name">Shop & Ship</span>
-              </a>
-              <i class="fa-solid fa-chevron-down arrow"></i>
-            </div>
-            <ul class="sub-menu">
-              <li><a href="payment-due.html">Payment Due</a></li>
-              <li><a href="ongoing-order.html">Ongoing Orders</a></li>
-              <li><a href="delivered-order.html">Delivered Orders</a></li>
-              <li><a href="cancelled-orders.html">Cancelled Orders</a></li>
-            </ul>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#">
-                <i class="fa-solid fa-house"></i>
-                <span class="link_name">Accesories</span>
-              </a>
-              <i class="fa-solid fa-chevron-down arrow"></i>
-            </div>
-            <ul class="sub-menu">
-              <li><a href="#">Payment Due</a></li>
-              <li><a href="#">Ongoing Orders</a></li>
-              <li><a href="#">Delivered Orders</a></li>
-              <li><a href="#">Cancelled Orders</a></li>
-            </ul>
-          </li>
-          <li>
-            <div class="profile-details">
-              <div class="profile-content">
-                <img
-                  class="rounded-circle"
-                  src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
-                  alt="profileImg"
-                />
-              </div>
-              <div class="name-job">
-                <div class="profile_name">Sazeduzzaman</div>
-                <div class="job">Web Desginer</div>
-              </div>
-              <i class="fa-solid fa-right-from-bracket text-white"></i>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="home-section">
-        <!-- Header Start -->
-        <div class="bg-white d-flex justify-content-between align-items-center user_header">
-          <!-- Toggler Icon -->
-          <div class="home-content">
-            <i class="fa-solid fa-right-left bx-menu"></i>
-          </div>
-          <!-- Header Menu -->
-          <div>
-            <a href="shop-form.html" class="me-3"
-              ><i class="fa-solid fa-ship pe-1 icon-site-red"></i>SHOPPING</a
-            >
-            <a href="" class="me-3"
-              ><i class="fa-solid fa-globe pe-1 icon-site-red"></i>SHIP ANYWHERE</a
-            >
-            <a href="" class="me-3"
-              ><i class="fa-solid fa-truck-ramp-box pe-1 icon-site-red"></i>USA TO BD CARGO</a
-            >
-            <a href="" class="me-3"
-              ><i class="fa-solid fa-shop pe-1 icon-site-red"></i>SHOP & SHIP</a
-            >
-            <a href="" class="me-3"
-              ><i class="fa-solid fa-user pe-1 icon-site-red"></i> VIEW ACCOUNTS</a
-            >
-          </div>
-          <!-- Profile -->
-          <div>
-            <div class="dropdown">
-              <a class="dropdown-toggle pe-2" type="button" data-bs-auto-close="outside" aria-expanded="false" data-bs-toggle="dropdown" >
-                <img
-                  class="rounded-circle p-0" width="50px"
-                  src="https://gravatar.com/avatar/f57bddebd1edf91412d5d68702530099"
-                  alt="profileImg"
-                />
-              </a>
-              <ul class="dropdown-menu border-0 shadow-lg text-end">
-                <li><a class="dropdown-item" href="#">My Profile <i class="fa-regular fa-user ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shipping List<i class="fa-solid fa-list ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Time Table <i class="fa-solid fa-table-cells-large ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Shiping Status <i class="fa-solid fa-signal ps-2"></i></a></li>
-                <li><a class="dropdown-item" href="#">Log Out <i class="fa-solid fa-arrow-right-from-bracket ps-2"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-         <!-- Header End -->
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-center" style="padding-top: 30px;">
-                <h3>Comming Soon</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="card">
-                <div class="card-header">
-                  <div class="d-flex justify-content-between align-items-center ">
-                    <h6>Shipment List</h6>
-                    <div>
-                      <button type="submit" class="btn btn-base">
-                        <i class="fa fa-plus"></i> Create New List
-                      </button>
+    <section>
+      <div class="container-fluid">
+        <div class="row" style="height: 100vh">
+          <div
+            class="col-lg-6"
+            style="
+              background-image: url('https://i.ibb.co/SRKKCrh/1.png');
+              background-repeat: no-repeat;
+              background-size: cover;
+              border-radius: 0 100px 100px 0;
+            "
+          >
+            <div class="row">
+              <div
+                class="col-lg-12 mx-auto"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100vh;
+                "
+              >
+                <div class="">
+                  <div class="card login-side-card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-center">
+                        <img src="assets/img/logo-2.png" alt="img" />
+                      </div>
+                      <div class="mt-5">
+                        <h6 class="text-black">Welcome</h6>
+                        <h2 class="text-black">
+                          We're a Transport & Logistics Service Provider.
+                        </h2>
+                        <p class="text-black">
+                          We are glad to see you again! Get access to your
+                          Orders, Wishlist and Recommendations.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="display tables" style="width: 100%">
-                      <thead>
-                        <tr>
-                          <th>TRACKING</th>
-                          <th>COURIER</th>
-                          <th>NUMBER</th>
-                          <th>RECEIVER</th>
-                          <th>PRICE</th>
-                          <th>CREATED DATE</th>
-                          <th>STATUS</th>
-                          <th>ACTION</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td>$85,675</td>
-                        </tr>
-                        <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td>$85,675</td>
-                        </tr>
-                      </tbody>
-                    </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row ms-5">
+              <div
+                class="col-lg-8 col-offset-2 me-auto "
+                style="
+                  height: 100vh;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h3 class="mb-3 text-center">Sign Up With</h3>
+                  </div>
+                  <div class="col-lg-12 mb-5 text-center ">
+                    <div>
+                      <p>--Or Sign Up With--</p>
+                    </div>
+                    <ul class="nav nav-tabs border-0 d-flex justify-content-center " id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link active nav-link-login"
+                          id="otp-tabs"
+                          data-bs-toggle="tab"
+                          data-bs-target="#otp-tabss"
+                          type="button"
+                          role="tab"
+                          aria-controls="otp-tabs"
+                          aria-selected="true"
+                          style="border-top-left-radius: 30px;border-bottom-left-radius: 30px;"
+                        >
+                          <i class="fa-solid fa-comment-sms"></i> OTP
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link nav-link-login"
+                          id="email-login"
+                          data-bs-toggle="tab"
+                          data-bs-target="#email-tabs"
+                          type="button"
+                          role="tab"
+                          aria-controls="email-login-pane"
+                          aria-selected="false"
+                        >
+                          <i class="fa-solid fa-envelope"></i> Email
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link nav-link-login"
+                          type="button"
+                        >
+                          <i class="fa-brands fa-google"></i> Google
+                        </button>
+                      </li>
+                      <li class="nav-item">
+                        <button
+                          class="nav-link nav-link-login"
+                          type="button"
+                          style="border-top-right-radius: 30px;border-bottom-right-radius: 30px;"
+                        >
+                          <i class="fa-brands fa-facebook-f"></i> Facebook
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="otp-tabss"
+                        role="tabpanel"
+                        aria-labelledby="otp-tabs"
+                        tabindex="0"
+                      >
+                        <form action="">
+                          <div class="mb-3">
+                            <input type="text" id="mobile_code" class="js-states form-control"  placeholder="Phone Number" name="name" style="width: 36rem !important;">
+                          </div>
+                          <div class="mb-5">
+                            <button type="submit" class="login-user-btn mb-2">Send OTP</button>
+                            <a href="user-dashboard.html" class="text-primary">Resend OTP</a>
+                          </div>
+                        </form>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="email-tabs"
+                        role="tabpanel"
+                        aria-labelledby="email-tabs"
+                        tabindex="0"
+                      >
+                      <form class="w-100">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"
+                            >Name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control w-100"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label"
+                            >Email</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control w-100"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label
+                            for="exampleInputPassword1"
+                            class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control w-100"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label
+                            for="exampleInputPassword1"
+                            class="form-label"
+                            >Confirm Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control w-100"
+                            id="exampleInputPassword1"
+                          />
+                        </div>
+                        <button type="submit" class="login-user-btn mb-2">
+                          Submit
+                        </button>
+                        <div class="text-center pt-3">
+                          <p>Already have an account? <a href="login.html" class="text-primary">Login</a></p>
+                        </div>
+                      </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -264,7 +265,7 @@
           </div>
         </div>
       </div>
-    </main>
+    </section>
 
     <!-- back to top area start -->
     <div class="back-to-top">
@@ -273,30 +274,16 @@
     <!-- back to top area end -->
 
     <!-- all plugins here -->
-    <script
-    src="https://kit.fontawesome.com/69b7156a94.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="assets/js/vendor.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/gh/linuxguist/countries@main/script.js"></script>
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
-    <script>
-      let arrow = document.querySelectorAll(".arrow");
-      for (var i = 0; i < arrow.length; i++) {
-        arrow[i].addEventListener("click", (e) => {
-          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
-          arrowParent.classList.toggle("showMenu");
-        });
-      }
-      let sidebar = document.querySelector(".sidebar");
-      let sidebarBtn = document.querySelector(".bx-menu");
-      console.log(sidebarBtn);
-      sidebarBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("close");
-      });
-    </script>
+    <script
+      src="https://kit.fontawesome.com/69b7156a94.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

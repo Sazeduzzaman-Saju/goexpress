@@ -235,91 +235,145 @@
                   >Dashboard</a
                 >
                 <span class="breadcrumb-item active" aria-current="page"
-                  >Shipment List</span
+                  >Order List</span
                 >
               </nav>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="card mt-4">
-                <div class="card-header">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <h6 class="p-0 m-0">Shipment List</h6>
-                    <div>
-                      <a href="create-booking.html" class="admin-btn-two">
-                        <i class="fa fa-plus"></i> Create New List
-                      </a>
-                    </div>
-                  </div>
-                </div>
+          <div class="row mt-4">
+            <div class="col-lg-6 col-offset-3 mx-auto">
+              <div class="card">
                 <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="display tables" style="width: 100%">
-                      <thead>
-                        <tr>
-                          <th>TRACKING</th>
-                          <th>COURIER</th>
-                          <th>NUMBER</th>
-                          <th>RECEIVER</th>
-                          <th>PRICE</th>
-                          <th>CREATED DATE</th>
-                          <th>STATUS</th>
-                          <th class="text-end">ACTION</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td class="text-end"><div
-                            class="btn-group"
-                            role="group"
-                            aria-label="Basic example"
-                          >
-                            <a
-                              type="button"
-                              href="order-details.html"
-                              class="admin-btn-one rounded-0"
-                              >Details</a
-                            >
-                            <a type="button" class="admin-btn-two rounded-0"
-                              >Paid</a
-                            ></td>
-                        </tr>
-                        <tr>
-                          <td>Unity Butler</td>
-                          <td>Marketing Designer</td>
-                          <td>Marketing Designer</td>
-                          <td>San Francisco</td>
-                          <td>47</td>
-                          <td>2009-12-09</td>
-                          <td>$85,675</td>
-                          <td class="text-end"><div
-                            class="btn-group"
-                            role="group"
-                            aria-label="Basic example"
-                          >
-                            <a
-                              type="button"
-                              href="order-details.html"
-                              class="admin-btn-one rounded-0"
-                              >Details</a
-                            >
-                            <a type="button" class="admin-btn-two rounded-0"
-                              >Paid</a
-                            ></td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div>
+                    <h6 class="my-2">CURRENT BALANCE : ৳0</h6>
                   </div>
+                  <div>
+                    <label for="">Enter Recharge Amount</label>
+                    <input type="number" class="form-control form-control-sm " name="" id="">
+                  </div>
+                  <form action="" method="get">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <h5 class="m-0 pt-2">Payment Method</h5>
+                        <ul
+                          class="nav nav-tabs delivery-methods-tabs"
+                          id="myTab"
+                          role="tablist"
+                        >
+                          <li class="nav-item me-2" role="presentation">
+                            <button
+                              class="nav-link active"
+                              id="home-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#home-tab-pane"
+                              type="button"
+                              role="tab"
+                              aria-controls="home-tab-pane"
+                              aria-selected="true"
+                            >
+                              <div class="d-flex flex-column tabs-icons">
+                                <div>
+                                  <img class="img-fluid" width="80px" src="https://cdn-icons-png.flaticon.com/512/5955/5955697.png" alt="">
+                                </div>
+                                <p>Cash/Cheque Deposit</p>
+                              </div>
+                            </button>
+                          </li>
+                          <li class="nav-item me-2" role="presentation">
+                            <button
+                              class="nav-link"
+                              id="profile-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#profile-tab-pane"
+                              type="button"
+                              role="tab"
+                              aria-controls="profile-tab-pane"
+                              aria-selected="false"
+                            >
+                              <div class="d-flex flex-column tabs-icons">
+                                <div>
+                                  <img class="img-fluid" src="https://cdn-icons-png.flaticon.com/512/1390/1390741.png" width="80px" alt="">
+                                </div>
+                                <p>Mobile/Online Banking</p>
+                              </div>
+                            </button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                          <div
+                            class="tab-pane fade show active"
+                            id="home-tab-pane"
+                            role="tabpanel"
+                            aria-labelledby="home-tab"
+                            tabindex="0"
+                          >
+                            <div class="row mt-2">
+                              <div class="col-lg-12">
+                                <div>
+                                  <label for="">Upload Payment Slip</label>
+                                  <div class="drop-zone">
+                                    <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="tab-pane fade"
+                            id="profile-tab-pane"
+                            role="tabpanel"
+                            aria-labelledby="profile-tab"
+                            tabindex="0"
+                          >
+                            <!-- <ul class="d-flex p-0 mt-4" style="list-style-type: none">
+                              <li>
+                                <h5>Choose Warehouse Address</h5>
+                                <input
+                                  type="checkbox"
+                                  id="checkbox7"
+                                  class="custom-checkbox p-0 m-0"
+                                />
+                                <label
+                                  for="checkbox7"
+                                  class="p-0 custom-label"
+                                  style="padding: 0 !important"
+                                >
+                                  <div class="card border-0">
+                                    <div class="card-header site-red text-white">
+                                      <strong>Shipping Address</strong>
+                                    </div>
+                                    <div class="card-body">
+                                      <p>Name : MD Mahbub Alam (Sumon)</p>
+                                      <p>Phone Number : +8801769696662</p>
+                                      <p>Email : example@gmail.com</p>
+                                      <p>
+                                        Address : Ambit Green Homes,3/3 abc South
+                                        Mugdapara Flat #3B , Dhaka-1214
+                                        Phone:01769-696662
+                                      </p>
+                                    </div>
+                                  </div>
+                                </label>
+                              </li>
+                            </ul> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-lg-12">
+                        <div class="d-flex justify-content-center">
+                          <button
+                            type="submit"
+                            class="admin-btn-one me-3"
+                          >
+                            Pay Now <i class="fa-regular fa-circle-check ps-2"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>

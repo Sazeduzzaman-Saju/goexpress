@@ -505,87 +505,154 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  // Initialize the first repeater item
+  $(".drag").repeater({
+    initval: 1,
+    show: function () {
+      // Initialize accordion for the new item
+      initializeAccordion(this);
+    },
+  });
 
- $(document).ready(function () {
-        // Initialize the first repeater item
-        $(".drag").repeater({
-          initval: 1,
-          show: function () {
-            // Initialize accordion for the new item
-            initializeAccordion(this);
-          },
-        });
+  // Function to add a new form repeater item with a transition
+  function addRepeaterItem() {
+    var newItem = $(".repeater-default:first").clone();
+    newItem.find("input, select").val(""); // Clear input values
+    newItem.hide().insertAfter(".repeater-default:last"); // Insert after the last repeater item
+    newItem.repeater({ show: initializeAccordion }); // Initialize as a repeater item with show option
+    newItem.slideDown(400); // Add slideDown animation
+  }
 
-        // Function to add a new form repeater item with a transition
-        function addRepeaterItem() {
-          var newItem = $(".repeater-default:first").clone();
-          newItem.find("input, select").val(""); // Clear input values
-          newItem.hide().insertAfter(".repeater-default:last"); // Insert after the last repeater item
-          newItem.repeater({ show: initializeAccordion }); // Initialize as a repeater item with show option
-          newItem.slideDown(400); // Add slideDown animation
-        }
+  // Initialize the sortable feature for dragging
+  $(".drag")
+    .sortable({
+      axis: "y",
+      cursor: "pointer",
+      opacity: 0.5,
+      placeholder: "row-dragging",
+      delay: 150,
+      update: function (event, ui) {
+        console.log("repeaterVal");
+        console.log($(".drag").repeaterVal());
+        console.log("serializeArray");
+        console.log($("form").serializeArray());
+      },
+    })
+    .disableSelection();
 
-        // Initialize the sortable feature for dragging
-        $(".drag")
-          .sortable({
-            axis: "y",
-            cursor: "pointer",
-            opacity: 0.5,
-            placeholder: "row-dragging",
-            delay: 150,
-            update: function (event, ui) {
-              console.log("repeaterVal");
-              console.log($(".drag").repeaterVal());
-              console.log("serializeArray");
-              console.log($("form").serializeArray());
-            },
-          })
-          .disableSelection();
+  // Handle the click event to add a new form repeater item
+  $(".repeat-add").on("click", function () {
+    addRepeaterItem();
+  });
 
-        // Handle the click event to add a new form repeater item
-        $(".repeat-add").on("click", function () {
-          addRepeaterItem();
-        });
+  // Handle the form submission
+  $("form").on("submit", function (event) {
+    event.preventDefault();
+    console.log("Form submitted");
+    // Additional logic for form submission if needed
+  });
 
-        // Handle the form submission
-        $("form").on("submit", function (event) {
-          event.preventDefault();
-          console.log("Form submitted");
-          // Additional logic for form submission if needed
-        });
-
-        function initializeAccordion(element) {
-          $(element)
-            .find(".accordion")
-            .each(function (index) {
-              const uniqueID = `accordionItem${new Date().getTime() + index}`;
-              $(this)
-                .find(".accordion-button")
-                .attr("data-bs-target", `.${uniqueID}`);
-              $(this).find(".accordion-collapse").attr("id", uniqueID);
-            });
-
-          // Initialize accordion events for the new item
-          $(element)
-            .find(".accordion")
-            .on("show.bs.collapse", function () {
-              $(this).find(".accordion-button").removeClass("collapsed");
-            })
-            .on("hide.bs.collapse", function () {
-              $(this).find(".accordion-button").addClass("collapsed");
-            });
-        }
+  function initializeAccordion(element) {
+    $(element)
+      .find(".accordion")
+      .each(function (index) {
+        const uniqueID = `accordionItem${new Date().getTime() + index}`;
+        $(this)
+          .find(".accordion-button")
+          .attr("data-bs-target", `.${uniqueID}`);
+        $(this).find(".accordion-collapse").attr("id", uniqueID);
       });
-      document.addEventListener("DOMContentLoaded", function () {
-        const repeaterItems = document.querySelectorAll(".form-reater-items");
 
-        repeaterItems.forEach((item, index) => {
-          const accordionButton = item.querySelector(".accordion-button");
-          const accordionCollapse = item.querySelector(".accordion-collapse");
-
-          // Generate unique IDs
-          const uniqueID = `accordionItem${index}`;
-          accordionButton.setAttribute("data-bs-target", `#${uniqueID}`);
-          accordionCollapse.setAttribute("id", uniqueID);
-        });
+    // Initialize accordion events for the new item
+    $(element)
+      .find(".accordion")
+      .on("show.bs.collapse", function () {
+        $(this).find(".accordion-button").removeClass("collapsed");
+      })
+      .on("hide.bs.collapse", function () {
+        $(this).find(".accordion-button").addClass("collapsed");
       });
+  }
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const repeaterItems = document.querySelectorAll(".form-reater-items");
+
+  repeaterItems.forEach((item, index) => {
+    const accordionButton = item.querySelector(".accordion-button");
+    const accordionCollapse = item.querySelector(".accordion-collapse");
+
+    // Generate unique IDs
+    const uniqueID = `accordionItem${index}`;
+    accordionButton.setAttribute("data-bs-target", `#${uniqueID}`);
+    accordionCollapse.setAttribute("id", uniqueID);
+  });
+});
+
+
+document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+  const dropZoneElement = inputElement.closest(".drop-zone");
+
+  dropZoneElement.addEventListener("click", (e) => {
+    inputElement.click();
+  });
+
+  inputElement.addEventListener("change", (e) => {
+    if (inputElement.files.length) {
+      updateThumbnail(dropZoneElement, inputElement.files[0]);
+    }
+  });
+
+  dropZoneElement.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropZoneElement.classList.add("drop-zone--over");
+  });
+
+  ["dragleave", "dragend"].forEach((type) => {
+    dropZoneElement.addEventListener(type, (e) => {
+      dropZoneElement.classList.remove("drop-zone--over");
+    });
+  });
+
+  dropZoneElement.addEventListener("drop", (e) => {
+    e.preventDefault();
+
+    if (e.dataTransfer.files.length) {
+      inputElement.files = e.dataTransfer.files;
+      updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+    }
+
+    dropZoneElement.classList.remove("drop-zone--over");
+  });
+});
+
+
+function updateThumbnail(dropZoneElement, file) {
+  let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+  // First time - remove the prompt
+  if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+    dropZoneElement.querySelector(".drop-zone__prompt").remove();
+  }
+
+  // First time - there is no thumbnail element, so lets create it
+  if (!thumbnailElement) {
+    thumbnailElement = document.createElement("div");
+    thumbnailElement.classList.add("drop-zone__thumb");
+    dropZoneElement.appendChild(thumbnailElement);
+  }
+
+  thumbnailElement.dataset.label = file.name;
+
+  // Show thumbnail for image files
+  if (file.type.startsWith("image/")) {
+    const reader = new FileReader();
+
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+    };
+  } else {
+    thumbnailElement.style.backgroundImage = null;
+  }
+}

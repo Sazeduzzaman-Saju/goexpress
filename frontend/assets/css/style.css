@@ -5793,9 +5793,36 @@ blockquote .icon {
   vertical-align: top;
   white-space: nowrap;
   width: 100%;
-  z-index: 9;
+  z-index: 1;
   border: 0;
 }
 .login-user-btn:hover {
   background: #fff2007c;
+}
+.form-select{
+  outline: 0;
+}
+.form-select:focus{
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+}
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(-5%);
+  }
+  25% {
+    transform: translateY(5%);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  75% {
+    transform: translateY(-5%);
+  }
+}
+
+.auto-move-up-and-down {
+  animation: moveUpDown 8s ease-in-out infinite;
+  transition: transform 0.5s ease-in-out;
 }
